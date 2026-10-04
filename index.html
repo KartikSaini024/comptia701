@@ -1,0 +1,1050 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Security+ SY0-701 Map</title>
+<meta name="description" content="Interactive mind map of the CompTIA Security+ SY0-701 syllabus with topic cards, recall mode, flashcards and an acronym glossary.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Atkinson+Hyperlegible+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>:root{
+  --bg:#E8ECF0; --dot:#C8D0D9; --surface:#FFFFFF; --surface2:#F5F7F9; --ink:#17202C; --muted:#5A6576; --line:#D3DAE2; --hover:#EEF2F6;
+  --c1:#0B7A84; --c2:#B4233C; --c3:#3949AB; --c4:#9A5B00; --c5:#7A3E9D; --root:#17202C;
+  --tipbg:#FFF5D9; --tipink:#5C4300; --known:#1E7F4F; --onc:#FFFFFF;
+  --shadow:0 1px 2px rgba(23,32,44,.07),0 6px 18px -8px rgba(23,32,44,.18);
+  --font:"Atkinson Hyperlegible","Segoe UI",system-ui,-apple-system,Roboto,sans-serif;
+  --mono:"Atkinson Hyperlegible Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --panelW:380px; --barH:56px;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#181D24; --dot:#2B323C; --surface:#222932; --surface2:#1D232B; --ink:#E6EAF0; --muted:#9AA5B4; --line:#353E4A; --hover:#2A323D;
+    --c1:#3BB6C1; --c2:#EE6A82; --c3:#8C9AF5; --c4:#E0A63E; --c5:#C48BE6; --root:#E6EAF0;
+    --tipbg:#3A3220; --tipink:#F3D58A; --known:#4CC38A; --onc:#12171D;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 22px -10px rgba(0,0,0,.6);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#181D24; --dot:#2B323C; --surface:#222932; --surface2:#1D232B; --ink:#E6EAF0; --muted:#9AA5B4; --line:#353E4A; --hover:#2A323D;
+  --c1:#3BB6C1; --c2:#EE6A82; --c3:#8C9AF5; --c4:#E0A63E; --c5:#C48BE6; --root:#E6EAF0;
+  --tipbg:#3A3220; --tipink:#F3D58A; --known:#4CC38A; --onc:#12171D;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 22px -10px rgba(0,0,0,.6);
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html,body{height:100%;margin:0}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.45;overflow:hidden;-webkit-font-smoothing:antialiased;touch-action:none}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2.5px solid var(--c3);outline-offset:2px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ---------- top bar ---------- */
+.bar{position:fixed;left:0;right:0;top:env(safe-area-inset-top,0px);height:var(--barH);display:flex;align-items:center;gap:10px;padding:0 14px;z-index:30;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:baseline;gap:8px;font-weight:700;font-size:17px;white-space:nowrap;letter-spacing:-.01em}
+.brand b{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:8px;background:var(--root);color:var(--bg);font-size:15px;align-self:center}
+.brand small{font-weight:400;color:var(--muted);font-size:13px}
+.searchbtn{flex:1;max-width:420px;margin-left:8px;display:flex;align-items:center;gap:8px;height:36px;padding:0 12px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--muted);text-align:left}
+.searchbtn:hover{border-color:var(--muted)}
+.searchbtn span{flex:1}
+kbd{font-family:var(--mono);font-size:11.5px;padding:1px 6px;border-radius:5px;border:1px solid var(--line);background:var(--surface2);color:var(--muted)}
+.tools{display:flex;align-items:center;gap:6px;margin-left:auto}
+.seg{display:flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--surface)}
+.seg button{border:0;background:none;padding:0 10px;height:34px;font-size:13.5px;color:var(--muted)}
+.seg button+button{border-left:1px solid var(--line)}
+.seg button:hover{background:var(--hover);color:var(--ink)}
+.tb{height:36px;display:inline-flex;align-items:center;gap:6px;padding:0 11px;border-radius:10px;border:1px solid var(--line);background:var(--surface);font-size:13.5px;white-space:nowrap}
+.tb:hover{background:var(--hover)}
+.tb[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.tb svg,.searchbtn svg{width:16px;height:16px;flex:none}
+.tb.icon{width:36px;padding:0;justify-content:center}
+.more{display:none}
+
+/* ---------- stage ---------- */
+#stage{position:fixed;inset:0;top:calc(var(--barH) + env(safe-area-inset-top,0px));overflow:hidden;cursor:grab;
+  background-color:var(--bg);background-image:radial-gradient(var(--dot) 1.1px,transparent 1.3px)}
+#stage.drag{cursor:grabbing}
+#world{position:absolute;left:0;top:0;transform-origin:0 0;will-change:transform}
+#edges{position:absolute;left:0;top:0;width:1px;height:1px;overflow:visible;pointer-events:none}
+#edges path{fill:none;stroke-linecap:round;opacity:.55;transition:opacity .2s}
+#edges path.on{opacity:1}
+
+/* ---------- nodes ---------- */
+.node{position:absolute;left:0;top:0;cursor:pointer;user-select:none;-webkit-user-select:none;will-change:transform,opacity;border-radius:12px;--c:var(--c3)}
+.node:focus-visible{outline-offset:3px}
+.node.root{width:220px;padding:18px 18px 16px;background:var(--root);color:var(--bg);border-radius:18px;box-shadow:var(--shadow)}
+.root .rt{font-size:24px;font-weight:700;letter-spacing:-.02em;line-height:1.1}
+.root .rs{font-size:14px;opacity:.75;margin-top:4px}
+.root .rbar{height:6px;border-radius:3px;background:color-mix(in srgb,var(--bg) 25%,transparent);margin-top:12px;overflow:hidden}
+.root .rbar i{display:block;height:100%;background:var(--bg)}
+.root .rm{font-size:12.5px;opacity:.75;margin-top:6px}
+
+.node.dom{width:250px;padding:13px 15px 12px;background:var(--c);color:var(--onc);border-radius:14px;box-shadow:var(--shadow)}
+.dom .dn{font-family:var(--mono);font-size:13px;opacity:.85}
+.dom .dt{font-size:17px;font-weight:700;line-height:1.2;letter-spacing:-.01em;margin-top:1px}
+.dom .dw{display:flex;justify-content:space-between;font-size:12.5px;opacity:.9;margin-top:8px}
+.dom .pb{height:4px;border-radius:2px;background:color-mix(in srgb,currentColor 28%,transparent);margin-top:5px;overflow:hidden}
+.dom .pb i{display:block;height:100%;background:currentColor}
+
+.node.br{width:236px;padding:9px 12px 9px 13px;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow)}
+.node.obj{width:262px;border-left:5px solid var(--c);padding-left:12px}
+.br .bh{display:flex;align-items:flex-start;gap:7px}
+.br .cd{font-family:var(--mono);font-size:12.5px;font-weight:600;color:var(--c);padding-top:2px}
+.br .bt{flex:1;font-weight:700;font-size:14.5px;line-height:1.25}
+.br .obj .bt{font-size:15px}
+.br .chev{flex:none;width:20px;height:20px;border-radius:6px;display:grid;place-items:center;background:color-mix(in srgb,var(--c) 14%,transparent);color:var(--c);margin-top:-1px;transition:transform .25s}
+.br .chev svg{width:12px;height:12px}
+.br.open .chev{transform:rotate(180deg)}
+.br .bd{font-size:12.5px;color:var(--muted);margin-top:3px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.br .bm{display:flex;align-items:center;gap:8px;margin-top:6px;font-size:11.5px;color:var(--muted)}
+.br .bm .pb{flex:1;height:3px;border-radius:2px;background:var(--line);overflow:hidden}
+.br .bm .pb i{display:block;height:100%;background:var(--c)}
+.br.done{border-color:color-mix(in srgb,var(--known) 55%,var(--line))}
+
+.node.leaf{width:310px;padding:10px 12px 11px 13px;background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--c);border-radius:10px;box-shadow:var(--shadow)}
+.leaf .lh{display:flex;align-items:flex-start;gap:8px}
+.leaf .lt{flex:1;font-weight:700;font-size:14.5px;line-height:1.25}
+.leaf .ld{font-size:13.5px;line-height:1.45;margin-top:4px;color:var(--ink)}
+.leaf .tp{font-size:12.5px;line-height:1.4;margin-top:7px;padding:6px 8px;border-radius:7px;background:var(--tipbg);color:var(--tipink)}
+.tp b,.ptip b{font-weight:700}
+.ck{flex:none;width:22px;height:22px;border-radius:50%;border:1.5px solid var(--line);background:var(--surface);display:grid;place-items:center;padding:0;margin-top:-1px;color:transparent}
+.ck svg{width:12px;height:12px}
+.ck:hover{border-color:var(--known);color:var(--known)}
+.leaf.known{background:color-mix(in srgb,var(--known) 7%,var(--surface))}
+.leaf.known .ck{background:var(--known);border-color:var(--known);color:var(--onc)}
+.node.sel{box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 55%,transparent),var(--shadow)}
+.node.root.sel,.node.dom.sel{box-shadow:0 0 0 3px var(--bg),0 0 0 6px var(--c),var(--shadow)}
+.node.flash{animation:flash 1.2s ease-out 1}
+@keyframes flash{0%,30%{box-shadow:0 0 0 8px color-mix(in srgb,var(--c) 45%,transparent)}100%{box-shadow:var(--shadow)}}
+.node.sel.flash{animation-name:flashsel}
+@keyframes flashsel{0%,30%{box-shadow:0 0 0 8px color-mix(in srgb,var(--c) 45%,transparent)}100%{box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 55%,transparent),var(--shadow)}}
+
+/* recall mode */
+.recall .leaf:not(.rev) .ld,.recall .leaf:not(.rev) .tp{filter:blur(5px);opacity:.55;user-select:none}
+.recall .leaf:not(.rev) .lh::after{content:"Tap to reveal";font-size:11px;color:var(--muted);align-self:center;white-space:nowrap}
+.recall .leaf:not(.rev) .lh .ck{display:none}
+
+/* ---------- legend + zoom ---------- */
+.legend{position:fixed;left:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:20;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 12px;box-shadow:var(--shadow);width:250px}
+.legend h3{margin:0 0 6px;font-size:13px;font-weight:700;display:flex;justify-content:space-between}
+.legend h3 span{font-weight:400;color:var(--muted)}
+.lg{display:grid;grid-template-columns:12px 1fr auto;align-items:center;gap:8px;width:100%;border:0;background:none;padding:5px 4px;border-radius:8px;text-align:left;font-size:13px}
+.lg:hover{background:var(--hover)}
+.lg .sw{width:12px;height:12px;border-radius:4px;background:var(--c)}
+.lg .lgn{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lg .lgp{font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.lg .lgb{grid-column:2/4;height:3px;border-radius:2px;background:var(--line);overflow:hidden;margin-top:-3px}
+.lg .lgb i{display:block;height:100%;background:var(--c)}
+.zoom{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:20;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);overflow:hidden;transition:right .3s}
+.zoom button{width:40px;height:38px;border:0;background:none;display:grid;place-items:center}
+.zoom button+button{border-top:1px solid var(--line)}
+.zoom button:hover{background:var(--hover)}
+.zoom svg{width:17px;height:17px}
+body.panel-open .zoom{right:calc(var(--panelW) + 14px)}
+
+/* ---------- side panel ---------- */
+#panel{position:fixed;right:0;top:calc(var(--barH) + env(safe-area-inset-top,0px));bottom:0;width:var(--panelW);z-index:25;background:var(--surface);border-left:1px solid var(--line);transform:translateX(100%);transition:transform .3s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column;--c:var(--c3)}
+body.panel-open #panel{transform:none}
+.ph{padding:14px 16px 0;border-top:5px solid var(--c)}
+.crumbs{display:flex;flex-wrap:wrap;gap:2px 4px;font-size:12.5px;color:var(--muted)}
+.crumbs button{border:0;background:none;padding:1px 3px;border-radius:5px;color:var(--muted);max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.crumbs button:hover{background:var(--hover);color:var(--ink)}
+.crumbs i{font-style:normal;opacity:.5}
+.ptitle{display:flex;gap:10px;align-items:flex-start;margin:8px 0 2px}
+.ptitle h2{flex:1;margin:0;font-size:21px;line-height:1.2;letter-spacing:-.015em}
+.ptitle .cd{font-family:var(--mono);color:var(--c);font-size:15px;margin-right:6px}
+.pclose{flex:none;width:32px;height:32px;border-radius:9px;border:1px solid var(--line);background:none;display:grid;place-items:center}
+.pclose:hover{background:var(--hover)}
+.pclose svg{width:15px;height:15px}
+.pb2{flex:1;overflow:auto;padding:8px 16px 20px;overscroll-behavior:contain}
+.pdesc{font-size:15.5px;line-height:1.55;margin:4px 0 12px}
+.ptip{font-size:14px;line-height:1.5;padding:10px 12px;border-radius:10px;background:var(--tipbg);color:var(--tipink);margin-bottom:14px}
+.ptip strong{display:block;font-size:12.5px;margin-bottom:2px}
+.pstat{font-size:13px;color:var(--muted);margin:2px 0 8px}
+.pkids{display:flex;flex-direction:column;gap:6px;margin:6px 0 14px}
+.kid{display:grid;grid-template-columns:auto 1fr;gap:2px 10px;text-align:left;border:1px solid var(--line);background:var(--surface2);border-radius:10px;padding:8px 10px}
+.kid:hover{border-color:var(--c)}
+.kid .kd{width:9px;height:9px;border-radius:50%;margin-top:6px;border:1.5px solid var(--c)}
+.kid.k .kd{background:var(--known);border-color:var(--known)}
+.kid .kt{font-weight:700;font-size:14px}
+.kid .kx{grid-column:2;font-size:12.5px;color:var(--muted);line-height:1.35}
+.pact{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.btn{height:38px;display:inline-flex;align-items:center;gap:7px;padding:0 14px;border-radius:10px;border:1px solid var(--line);background:var(--surface);font-size:14px;font-weight:700}
+.btn:hover{background:var(--hover)}
+.btn.pri{background:var(--c);border-color:var(--c);color:var(--onc)}
+.btn.pri:hover{filter:brightness(1.08)}
+.btn.ok{background:var(--known);border-color:var(--known);color:var(--onc)}
+.btn svg{width:15px;height:15px}
+.pnav{display:flex;gap:8px;padding:10px 16px calc(12px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line)}
+.pnav .btn{flex:1;justify-content:center;font-weight:400}
+
+/* ---------- modals ---------- */
+.modal{position:fixed;inset:0;z-index:50;display:none;align-items:flex-start;justify-content:center;padding:calc(70px + env(safe-area-inset-top,0px)) 14px 14px;background:color-mix(in srgb,var(--bg) 55%,rgba(0,0,0,.35));backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+.modal.on{display:flex}
+.mbox{width:min(640px,100%);max-height:calc(100% - 20px);display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:0 20px 60px -20px rgba(0,0,0,.45);overflow:hidden}
+.mhead{display:flex;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid var(--line)}
+.mhead h2{margin:0;font-size:17px;flex:1}
+.minput{flex:1;border:0;background:none;font:inherit;font-size:17px;color:var(--ink);outline:none;min-width:0}
+.mhead svg{width:18px;height:18px;color:var(--muted);flex:none}
+.mlist{overflow:auto;padding:6px;overscroll-behavior:contain}
+.res{display:block;width:100%;text-align:left;border:0;background:none;padding:9px 10px;border-radius:10px;--c:var(--c3)}
+.res:hover,.res.act{background:var(--hover)}
+.res .rt1{display:flex;gap:8px;align-items:center;font-weight:700;font-size:14.5px}
+.res .rt1 .dot{width:9px;height:9px;border-radius:3px;background:var(--c);flex:none}
+.res .rt1 .tag{font-weight:400;font-size:11.5px;color:var(--muted);border:1px solid var(--line);border-radius:5px;padding:0 5px;margin-left:auto}
+.res .rp{font-size:12px;color:var(--muted);margin:1px 0 0 17px}
+.res .rx{font-size:13px;color:var(--muted);margin:2px 0 0 17px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.res mark{background:color-mix(in srgb,var(--c4) 28%,transparent);color:inherit;border-radius:2px}
+.empty{padding:22px;text-align:center;color:var(--muted);font-size:14px}
+.gl{display:grid;grid-template-columns:92px 1fr;gap:2px 12px;padding:8px 10px;border-radius:9px}
+.gl:nth-child(odd){background:var(--surface2)}
+.gl .ga{font-family:var(--mono);font-weight:600;font-size:13.5px;color:var(--c3);word-break:break-word}
+.gl .ge{font-weight:700;font-size:14px}
+.gl .gd{grid-column:2;font-size:13px;color:var(--muted)}
+
+/* study */
+.sbody{padding:16px;overflow:auto}
+.sopt{display:flex;flex-direction:column;gap:14px}
+.sopt label.row{display:flex;flex-direction:column;gap:6px;font-size:13.5px;font-weight:700}
+.sopt select{height:40px;border-radius:10px;border:1px solid var(--line);background:var(--surface2);color:var(--ink);font:inherit;padding:0 10px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{height:34px;padding:0 12px;border-radius:9px;border:1px solid var(--line);background:var(--surface2);font-size:13.5px}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chk{display:flex;align-items:center;gap:8px;font-size:14px}
+.chk input{width:18px;height:18px;accent-color:var(--c3)}
+.card{border:1px solid var(--line);border-top:5px solid var(--c);border-radius:14px;padding:18px;min-height:220px;display:flex;flex-direction:column;background:var(--surface2);--c:var(--c3)}
+.card .cp{font-size:12.5px;color:var(--muted)}
+.card .cq{font-size:22px;font-weight:700;line-height:1.25;margin:10px 0;letter-spacing:-.01em}
+.card .cq.long{font-size:17px;font-weight:400;line-height:1.5}
+.card .ca{border-top:1px dashed var(--line);padding-top:12px;margin-top:auto;font-size:15.5px;line-height:1.55}
+.card .ca.big{font-size:21px;font-weight:700}
+.sfoot{display:flex;gap:8px;align-items:center;margin-top:14px}
+.sfoot .sp{margin-right:auto;font-size:13px;color:var(--muted)}
+.sprog{height:4px;border-radius:2px;background:var(--line);overflow:hidden;margin-bottom:12px}
+.sprog i{display:block;height:100%;background:var(--c3);transition:width .3s}
+.help dl{display:grid;grid-template-columns:auto 1fr;gap:8px 14px;margin:0;padding:16px;font-size:14px}
+.help dt{white-space:nowrap}
+.help dd{margin:0;color:var(--muted)}
+.help p{margin:0 16px 16px;font-size:14px;line-height:1.5}
+
+.toast{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);opacity:0;z-index:60;background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:14px;pointer-events:none;transition:all .3s;max-width:calc(100% - 28px);text-align:center}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+@media (max-width:1100px){.tl{display:none}.seg button{padding:0 8px}}
+@media (max-width:860px){
+  :root{--panelW:100%}
+  .brand small,.searchbtn kbd,.searchbtn span,.seg,.tools .tb:not(.keep){display:none}
+  .searchbtn{flex:none;width:40px;padding:0;justify-content:center;margin-left:auto}
+  .tools{margin-left:0}
+  .more{display:inline-flex}
+  #panel{top:auto;height:62%;border-left:0;border-top:1px solid var(--line);border-radius:18px 18px 0 0;transform:translateY(100%);box-shadow:0 -10px 40px -10px rgba(0,0,0,.3)}
+  body.panel-open #panel{transform:none}
+  body.panel-open .zoom{right:14px;bottom:calc(62% + 10px)}
+  .legend{width:auto;right:70px;padding:6px 8px}
+  .legend h3{display:none}
+  .legend .lgs{display:flex;gap:4px}
+  .lg{grid-template-columns:10px auto;gap:5px;padding:4px 6px;width:auto}
+  .lg .lgn,.lg .lgb{display:none}
+  .node.leaf{width:280px}
+}
+.menu{position:fixed;right:10px;top:calc(var(--barH) + env(safe-area-inset-top,0px) + 4px);z-index:40;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:6px;display:none;flex-direction:column;min-width:210px}
+.menu.on{display:flex}
+.menu button{border:0;background:none;text-align:left;padding:10px 12px;border-radius:8px;font-size:15px}
+.menu button:hover{background:var(--hover)}
+.menu hr{border:0;border-top:1px solid var(--line);margin:4px 0}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+.btn:disabled{opacity:.45;cursor:default}
+.btn kbd{margin-left:2px}
+.btn.pri kbd,.btn.ok kbd{background:transparent;color:inherit;border-color:currentColor;opacity:.7}
+.lgt{border:0;background:none;padding:0;font-weight:700;font-size:13px;display:inline-flex;align-items:center;gap:5px}
+.lgt::before{content:"";width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) translate(-1px,-1px);transition:transform .2s}
+.legend.min .lgt::before{transform:rotate(-45deg)}
+.legend.min{width:auto}
+.legend.min .lgs{display:flex;gap:2px}
+.legend.min .lg{grid-template-columns:12px;width:auto;padding:5px}
+.legend.min .lg .lgn,.legend.min .lg .lgp,.legend.min .lg .lgb{display:none}
+.legend.min h3{margin-bottom:4px}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="brand"><b>+</b>Security+ map<small>SY0-701</small></div>
+  <button class="searchbtn" id="openSearch" aria-label="Search"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5L14 14"/></svg><span>Search topics and acronyms</span><kbd>/</kbd></button>
+  <div class="tools">
+    <div class="seg" role="group" aria-label="Open the map to a level">
+      <button data-lv="1" title="Collapse to the five domains">Domains</button><button data-lv="2" title="Open every domain">Objectives</button><button data-lv="3" title="Open every objective">Topics</button>
+    </div>
+    <button class="tb" id="bFocus" aria-pressed="true" title="When on, opening a branch closes its siblings so the map stays compact"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h4M6 8l3-4h5M6 8l3 4h5"/></svg><span class="tl">Auto-collapse</span></button>
+    <button class="tb" id="bRecall" aria-pressed="false" title="Hide explanations until you tap a card (R)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 8S4 3.5 8 3.5 14.5 8 14.5 8 12 12.5 8 12.5 1.5 8 1.5 8z"/><circle cx="8" cy="8" r="2"/></svg><span class="tl">Recall</span></button>
+    <button class="tb" id="bStudy" title="Flashcards (S)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="2" y="4" width="9" height="10" rx="1.5"/><path d="M5 4V3.5A1.5 1.5 0 016.5 2h6A1.5 1.5 0 0114 3.5v7a1.5 1.5 0 01-1.5 1.5H11"/></svg><span class="tl">Flashcards</span></button>
+    <button class="tb" id="bGloss" title="Acronym glossary (G)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3 2.5h7.5a2 2 0 012 2v9H5a2 2 0 01-2-2v-9z"/><path d="M3 11.5a2 2 0 012-2h7.5"/></svg><span class="tl">Acronyms</span></button>
+    <button class="tb icon" id="bTheme" aria-label="Toggle dark theme" title="Toggle theme (T)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M13.5 9.5A5.5 5.5 0 016.5 2.5a5.5 5.5 0 107 7z"/></svg></button>
+    <button class="tb icon" id="bHelp" aria-label="Help and shortcuts" title="Help (?)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="8" cy="8" r="6"/><path d="M6.3 6.2a1.8 1.8 0 113 1.4c-.7.5-1.3.9-1.3 1.8M8 11.3v.1"/></svg></button>
+    <button class="tb icon more keep" id="bMore" aria-label="More options"><svg viewBox="0 0 16 16" fill="currentColor"><circle cx="3.5" cy="8" r="1.4"/><circle cx="8" cy="8" r="1.4"/><circle cx="12.5" cy="8" r="1.4"/></svg></button>
+  </div>
+</header>
+<div class="menu" id="menu"></div>
+
+<main id="stage" aria-label="Mind map. Use arrow keys to move between branches.">
+  <div id="world" role="tree"><svg id="edges" aria-hidden="true"></svg><div id="nodes"></div></div>
+</main>
+<aside id="panel" aria-label="Topic details"></aside>
+<div class="legend" id="legend"></div>
+<div class="zoom">
+  <button id="zIn" aria-label="Zoom in" title="Zoom in (+)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 3v10M3 8h10"/></svg></button>
+  <button id="zOut" aria-label="Zoom out" title="Zoom out (−)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10"/></svg></button>
+  <button id="zFit" aria-label="Fit map to screen" title="Fit to screen (F)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6V2.5H6M10 2.5h3.5V6M13.5 10v3.5H10M6 13.5H2.5V10"/></svg></button>
+</div>
+
+<div class="modal" id="mSearch" role="dialog" aria-modal="true" aria-label="Search">
+  <div class="mbox">
+    <div class="mhead"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5L14 14"/></svg><input class="minput" id="sInput" placeholder="Search topics, acronyms or 2.4…" autocomplete="off" spellcheck="false"><kbd>Esc</kbd></div>
+    <div class="mlist" id="sList"></div>
+  </div>
+</div>
+<div class="modal" id="mGloss" role="dialog" aria-modal="true" aria-label="Acronyms">
+  <div class="mbox">
+    <div class="mhead"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3 2.5h7.5a2 2 0 012 2v9H5a2 2 0 01-2-2v-9z"/><path d="M3 11.5a2 2 0 012-2h7.5"/></svg><input class="minput" id="gInput" placeholder="Filter acronyms" autocomplete="off" spellcheck="false"><span id="gCount" class="pstat" style="margin:0;white-space:nowrap"></span><button class="pclose" data-close aria-label="Close"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4l8 8M12 4l-8 8"/></svg></button></div>
+    <div class="mlist" id="gList"></div>
+  </div>
+</div>
+<div class="modal" id="mStudy" role="dialog" aria-modal="true" aria-label="Flashcards">
+  <div class="mbox">
+    <div class="mhead"><h2 id="stTitle">Flashcards</h2><button class="pclose" data-close aria-label="Close"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4l8 8M12 4l-8 8"/></svg></button></div>
+    <div class="sbody" id="stBody"></div>
+  </div>
+</div>
+<div class="modal help" id="mHelp" role="dialog" aria-modal="true" aria-label="Help">
+  <div class="mbox">
+    <div class="mhead"><h2>How to use the map</h2><button class="pclose" data-close aria-label="Close"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4l8 8M12 4l-8 8"/></svg></button></div>
+    <div class="mlist">
+      <p style="margin-top:12px">Open a domain, then an objective, and keep going until you reach the cards at the end of each branch: those hold the explanation and exam tips. Tick a card when you know it. Progress is saved in this browser. <span id="stats"></span></p>
+      <p><b>Auto-collapse</b> keeps one branch open at a time. <b>Recall</b> blurs every explanation so you can test yourself before tapping to reveal. <b>Next topic</b> walks through every card in syllabus order.</p>
+      <dl>
+        <dt><kbd>←</kbd> <kbd>→</kbd> <kbd>↑</kbd> <kbd>↓</kbd></dt><dd>Move around the tree, open and close branches</dd>
+        <dt><kbd>Enter</kbd></dt><dd>Open or close a branch; tick a card as known</dd>
+        <dt><kbd>N</kbd> / <kbd>P</kbd></dt><dd>Next or previous topic card, in syllabus order</dd>
+        <dt><kbd>K</kbd></dt><dd>Mark the selected card as known</dd>
+        <dt><kbd>1</kbd> to <kbd>5</kbd></dt><dd>Jump to a domain</dd>
+        <dt><kbd>/</kbd> or <kbd>Ctrl</kbd> <kbd>K</kbd></dt><dd>Search topics and acronyms</dd>
+        <dt><kbd>R</kbd></dt><dd>Recall mode on or off</dd>
+        <dt><kbd>S</kbd></dt><dd>Flashcards for the selected branch</dd>
+        <dt><kbd>G</kbd></dt><dd>Acronym glossary</dd>
+        <dt><kbd>F</kbd>, <kbd>+</kbd>, <kbd>−</kbd></dt><dd>Fit to screen, zoom in, zoom out</dd>
+        <dt>Mouse</dt><dd>Drag or scroll to move. Ctrl + scroll to zoom. Double-click a branch to open everything inside it.</dd>
+        <dt>Touch</dt><dd>Drag to move, pinch to zoom, tap to open.</dd>
+      </dl>
+      <p><button class="btn" id="resetProg">Clear all progress</button></p>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>window.__OUTLINE__="1 General Security Concepts :: The foundations: control types, CIA and AAA, Zero Trust, physical security, change management and cryptography.\n  1.1 Security controls :: Compare and contrast the categories and types of security controls. !! Every control has a category (how it is implemented) and a type (what it does). A visible CCTV camera is Physical by category and both Deterrent and Detective by type.\n    Categories :: How the control is implemented and who runs it.\n      Technical :: Enforced by hardware or software: firewalls, encryption, IDS, MFA, ACLs. Automated and scalable, but can fail through bugs or become obsolete. !! Also called logical controls.\n      Managerial :: Strategy and governance decisions: risk assessments, security policies, training programs, vendor management. Only as strong as leadership commitment. !! Also called administrative controls.\n      Operational :: Day-to-day procedures carried out by people: backups, awareness training, incident response steps, change management. Main weakness is human error.\n      Physical :: Protect facilities and hardware: guards, fences, locks, CCTV, biometric doors, fire suppression. Offer nothing against remote cyberattacks.\n    Types :: What the control does and when it acts in the life of an incident.\n      Preventive :: Stops an incident before it happens: firewall rules, access control, strong password policy, encryption, door locks.\n      Deterrent :: Discourages an attacker by raising the risk or lowering the reward, without physically stopping them: warning banners, visible cameras, lighting, lockout warnings.\n      Detective :: Discovers and alerts on activity during or after the fact: IDS, audit logs, SIEM, anomaly detection, motion sensors.\n      Corrective :: Limits damage and returns things to normal after detection: AV quarantine, restoring from backup, patching, incident response actions.\n      Compensating :: An alternative used when the primary control is impossible or too costly. A system that cannot support MFA gets strict passwords plus behaviour monitoring instead. !! Watch for \"cannot implement X, so...\" in the question stem.\n      Directive :: Tells people what they must or should do: AUP, policies, standards, procedures, \"Authorized personnel only\" signs.\n  1.2 Fundamental concepts :: Summarize fundamental security concepts: CIA, non-repudiation, AAA, gap analysis, Zero Trust, physical security and deception.\n    CIA triad :: The three goals every security control serves.\n      Confidentiality :: Only authorized people can read the data. Tools: encryption, access controls, MFA, data masking.\n      Integrity :: Data is accurate and has not been altered without authorization. Tools: hashing, digital signatures, certificates, FIM.\n      Availability :: Systems and data are reachable when needed. Tools: redundancy, backups, HA clustering, load balancing, patching.\n    Non-repudiation :: The sender cannot deny sending a message (and the receiver cannot deny receiving it). Achieved with digital signatures made with the sender's private key. !! Digital signature = integrity + authentication + non-repudiation.\n    AAA framework :: Authentication, Authorization and Accounting. RADIUS and TACACS+ are classic AAA servers.\n      Authentication :: Proving identity. People use passwords, biometrics or tokens; systems and devices use certificates or keys.\n      Authorization :: What an authenticated subject may do. Models include RBAC, MAC, DAC, ABAC and rule-based access control.\n      Accounting :: Recording what was done: logs, audit trails, session times and data used. Proves users stayed within their permissions.\n    Gap analysis :: Compare the current security posture with a desired state or framework (NIST CSF, ISO 27001) to list what is missing and plan fixes.\n    Zero Trust :: Never trust, always verify. No implicit trust based on network location; every request is authenticated, authorized and continuously checked. !! Control plane decides, data plane enforces. Policy Engine + Policy Administrator together form the Policy Decision Point.\n      Control plane :: Where access decisions are made.\n        Adaptive identity :: Verification strength adapts to context such as location, device health, behaviour and time of day.\n        Threat scope reduction :: Shrink what an attacker could reach: least privilege, microsegmentation, small trust zones.\n        Policy-driven access control :: Access is granted by evaluated policy rules, not static permission lists.\n        Policy Engine (PE) :: Evaluates each access request against policy and signals (identity, device, threat intel) and decides grant or deny.\n        Policy Administrator (PA) :: Carries out the PE's decision: sets up or tears down the session and tells the enforcement point what to do.\n      Data plane :: Where the traffic actually flows.\n        Subject / system :: The user, device or application asking for access.\n        Policy Enforcement Point (PEP) :: Gatekeeper in the data path that allows, monitors or blocks the connection as instructed by the PA.\n        Implicit trust zone :: The area behind the PEP where trust is assumed. Zero Trust keeps it as small as possible.\n    Physical security :: Protecting people, facilities and hardware.\n      Bollards :: Short sturdy posts that stop vehicles from ramming entrances or buildings.\n      Access control vestibule :: Two-door entry where only one door opens at a time, trapping tailgaters. Formerly called a mantrap.\n      Fencing :: Perimeter barrier that deters and delays intruders and channels people to controlled entry points.\n      Video surveillance :: CCTV that records and deters. Detective when reviewed, deterrent when visible.\n      Security guard :: Human judgement: can check IDs, respond to events, stop tailgating and deter.\n      Access badge :: ID, smart card or RFID badge for entry; creates an entry log. Can be cloned or shared.\n      Lighting :: Removes hiding spots, deters intruders and lets cameras see.\n      Sensors :: Detect presence or movement.\n        Infrared :: Detects heat signatures, typically from human bodies.\n        Pressure :: Detects weight or force changes, such as footsteps on a floor or mat.\n        Microwave :: Sends microwave pulses and detects movement from reflection changes; covers large areas.\n        Ultrasonic :: Uses high-frequency sound waves and detects movement through echo changes.\n    Deception and disruption :: Traps that detect attackers and waste their time.\n      Honeypot :: A single decoy system that lures attackers so you can observe their tactics.\n      Honeynet :: A network of honeypots that simulates a realistic environment.\n      Honeyfile :: A bait file (for example passwords.xlsx). Any access raises an alert.\n      Honeytoken :: Fake data such as a dummy credential, API key or record. It has no real use, so seeing it used anywhere proves a breach.\n  1.3 Change management :: Explain why change management matters and how it affects security. Uncontrolled changes introduce vulnerabilities and outages. !! Change went wrong? The answer is the backout plan. Who approves? The Change Advisory Board (CAB).\n    Business processes :: The approval workflow for every change.\n      Approval process :: Changes are reviewed and approved (often by a CAB) so only vetted, necessary changes are made.\n      Ownership :: One named owner is accountable for the change being implemented correctly and securely.\n      Stakeholders :: Everyone affected is informed and consulted, which surfaces hidden risks.\n      Impact analysis :: Assess what could break and which risks the change introduces before approving it.\n      Test results :: Test in a non-production environment first to catch flaws and compatibility problems.\n      Backout plan :: A documented way to roll back if the change fails or creates new vulnerabilities.\n      Maintenance window :: An agreed, low-impact time slot for changes, with staff available if problems arise.\n      Standard operating procedure :: A documented, repeatable way to carry out changes consistently.\n    Technical implications :: What a change can affect on systems.\n      Allow and deny lists :: New apps, IPs or services may need adding or removing from allow/deny lists.\n      Restricted activities :: The change scope limits what may be touched; anything outside it needs a new request.\n      Downtime :: Plan and communicate it; security tools may be offline during the change.\n      Service restart :: Restarting a service can drop connections or come back insecurely; verify afterwards.\n      Application restart :: Same concern: confirm settings persisted and the app returned in a secure state.\n      Legacy applications :: Older software may break, be unsupported or hide unpatched vulnerabilities.\n      Dependencies :: Changing one component can break others that rely on it (libraries, services, integrations).\n    Documentation :: Update network diagrams and policies/procedures after each change so everyone works from the current picture.\n    Version control :: Track every revision: who changed what and when. Enables rollback, debugging and forensics.\n  1.4 Cryptographic solutions :: Explain why appropriate cryptographic solutions matter for confidentiality, integrity, authentication and non-repudiation.\n    PKI :: Public Key Infrastructure: the CAs, certificates, keys and policies that bind public keys to identities.\n      Public and private keys :: Asymmetric pair. Encrypt with the recipient's public key so only their private key decrypts. Sign with your private key so anyone can verify with your public key. !! Confidentiality uses the recipient's public key. Signatures use the sender's private key.\n      Key escrow :: A trusted third party holds copies of keys so data can be recovered if keys are lost, or accessed for legal reasons.\n    Encryption :: Turning plaintext into ciphertext.\n      Levels :: How much data is encrypted as one unit.\n        Full-disk (FDE) :: Encrypts the whole drive; protects data on a lost or stolen device. BitLocker, FileVault, self-encrypting drives.\n        Partition / volume :: Encrypts a specific section of a disk.\n        File :: Encrypts individual files (for example Windows EFS).\n        Database :: Encrypts the entire database (for example Transparent Data Encryption).\n        Record :: Encrypts specific rows or fields, such as a card-number column.\n      Transport / communication :: Protects data in transit: TLS/HTTPS, IPsec, SSH, VPNs.\n      Symmetric :: One shared secret key encrypts and decrypts. Fast, good for bulk data. AES, ChaCha20, 3DES. Hard part: distributing the key safely.\n      Asymmetric :: A public/private key pair. Slower; used for key exchange and signatures. RSA, ECC, Diffie-Hellman. !! TLS is hybrid: asymmetric crypto exchanges a symmetric session key, which then encrypts the data.\n      Key exchange :: Agreeing on keys over an untrusted network. Diffie-Hellman; ephemeral DHE/ECDHE gives perfect forward secrecy.\n      Algorithms :: The math used: AES (symmetric), RSA and ECC (asymmetric), SHA-2 (hashing), DH (key exchange).\n      Key length :: Longer keys are harder to brute force but slower. AES-128/256, RSA 2048+; ECC gets equal strength with much shorter keys.\n    Tools :: Hardware and systems that protect keys.\n      TPM :: Trusted Platform Module: a chip on the motherboard that stores keys and measurements; enables secure boot and BitLocker.\n      HSM :: Hardware Security Module: dedicated, tamper-resistant appliance or card that generates and stores keys at scale (CAs, banks).\n      Key management system :: Manages the key lifecycle: generate, distribute, rotate, revoke and destroy (for example a cloud KMS).\n      Secure enclave :: Isolated area of a processor that handles sensitive data such as biometrics and keys, walled off from the main OS.\n    Obfuscation :: Hiding or disguising data rather than encrypting it.\n      Steganography :: Hiding data inside other data, such as a message embedded in an image or audio file.\n      Tokenization :: Swaps a sensitive value for a random token; the real value lives in a secure vault. Common for payment cards.\n      Data masking :: Hides part of the data from view, for example showing ****-****-****-1234.\n    Hashing :: One-way function that produces a fixed-length digest; any change gives a different hash, proving integrity. SHA-256 is current; MD5 and SHA-1 are broken by collisions.\n    Salting :: A random value added to each password before hashing, so identical passwords produce different hashes. Defeats rainbow tables.\n    Digital signatures :: A hash of the message encrypted with the sender's private key, verified with their public key. Provides integrity, authenticity and non-repudiation.\n    Key stretching :: Hashes a password thousands of times so each guess is slow, making brute force costly. PBKDF2, bcrypt, scrypt, Argon2.\n    Blockchain :: Distributed ledger where each block contains the hash of the previous one, making tampering evident.\n    Open public ledger :: A ledger anyone can read, so every transaction is visible (for example Bitcoin).\n    Certificates :: Digital documents that bind a public key to an identity.\n      Certificate authority (CA) :: Trusted entity that issues and signs certificates. Chain: root CA, intermediate CA, end-entity certificate.\n      CRL :: Certificate Revocation List: the CA's published list of certificates revoked before expiry. Downloaded periodically.\n      OCSP :: Online Certificate Status Protocol: real-time check of one certificate's status. OCSP stapling lets the server attach the response. !! CRL = a downloaded list. OCSP = a live query.\n      Self-signed vs third-party :: Self-signed certificates are signed by their own key and not trusted by browsers (internal or test use). Third-party certificates come from a public CA and are trusted.\n      Root of trust :: An inherently trusted starting point (root CA, TPM, HSM) from which all other trust is derived.\n      CSR generation :: Create a key pair, then send a Certificate Signing Request (public key + identity details) to the CA to get a certificate.\n      Wildcard :: A *.example.com certificate covers every first-level subdomain. A SAN certificate lists several specific names instead.\n2 Threats, Vulnerabilities and Mitigations :: Who attacks, how they get in, which weaknesses they exploit, the signs of an attack and how to defend.\n  2.1 Threat actors and motivations :: Compare and contrast common threat actors, their attributes and motivations.\n    Actors :: Who is behind an attack. !! Highest resources and sophistication: nation-state. Lowest: unskilled attacker. Already inside: insider threat. Unintentional risk: shadow IT.\n      Nation-state :: Government-backed teams; the most resources and skill. Espionage, war, disruption. Often run Advanced Persistent Threats (APTs) and use zero-days.\n      Unskilled attacker :: Runs pre-made tools and scripts with little understanding (\"script kiddie\"). Low skill and funding; thrill, chaos or revenge.\n      Hacktivist :: Hacks for a political or social cause: defacements, DDoS, leaks.\n      Insider threat :: Employee or contractor who misuses legitimate access. Revenge, money or ethics. Hard to spot because they are already trusted.\n      Organized crime :: Professional criminal groups after money: ransomware, fraud, data theft. Well funded and sophisticated.\n      Shadow IT :: Employees using unapproved apps, cloud services or devices. Usually not malicious, but unmanaged and unpatched.\n    Attributes :: How actors differ from each other.\n      Internal / external :: Inside the organisation (insider, shadow IT) or outside (nation-state, crime, hacktivist). Insiders already have access and knowledge.\n      Resources / funding :: Money, people, time and tools. Nation-states highest, organized crime high, unskilled attackers lowest.\n      Sophistication / capability :: Technical skill. Nation-state > organized crime > hacktivist > unskilled attacker.\n    Motivations :: Why they attack.\n      Data exfiltration :: Stealing data to sell or use as leverage. Organized crime, nation-states, insiders.\n      Espionage :: Spying for government, military or corporate secrets. Typical of nation-states.\n      Service disruption :: Knocking a service offline with DDoS or sabotage. Hacktivists, nation-states.\n      Blackmail :: Threatening to leak or keep data locked unless paid. Ransomware gangs.\n      Financial gain :: Fraud, ransomware, selling stolen data. The main driver of organized crime.\n      Philosophical / political beliefs :: Acting for an ideology or cause. Hacktivists.\n      Ethical :: Acting from a sense of right: whistleblowers, white-hat vulnerability disclosure.\n      Revenge :: Payback for a perceived wrong. Disgruntled employees and ex-employees.\n      Disruption / chaos :: Mayhem for its own sake, with no clear financial or political goal.\n      War :: Cyber operations as part of military conflict, such as attacks on critical infrastructure. Nation-states.\n  2.2 Threat vectors and attack surfaces :: Explain the common paths attackers use to reach a target. !! Vector = the path in. Attack surface = all the possible entry points you expose.\n    Message-based :: Malicious content delivered through messages.\n      Email :: The most common vector: phishing links, malicious attachments, ransomware, spam.\n      SMS :: Text messages with phishing links (smishing) aimed at phones.\n      Instant messaging :: Chat apps (Teams, Slack, WhatsApp) used to send malicious links or files.\n    Image-based :: Malicious payloads or code hidden in image files that exploit the viewer.\n    File-based :: Malware embedded in documents, PDFs or macros that runs when opened.\n    Voice call :: Vishing: phone calls that trick victims into revealing information or taking harmful actions.\n    Removable device :: USB drives and other media that carry malware; \"dropped\" USB sticks rely on curiosity.\n    Vulnerable software :: Exploitable weaknesses in installed or remote software.\n      Client-based :: Software installed on the endpoint (often an agent) that can itself be exploited.\n      Agentless :: Accessed without installing anything (for example browser-based). Harder to monitor.\n    Unsupported systems and apps :: End-of-life software that no longer gets security patches.\n    Unsecure networks :: Networks attackers can sniff or join.\n      Wireless :: Open or weakly encrypted Wi-Fi can be intercepted; rogue APs and evil twins.\n      Wired :: Physical access to an open network jack lets an attacker plug in.\n      Bluetooth :: Bluejacking (unsolicited messages) and bluesnarfing (stealing data) from discoverable devices.\n    Open service ports :: Every listening port is a possible entry point. Close what isn't needed.\n    Default credentials :: Unchanged factory usernames and passwords (admin/admin) are trivial to guess.\n    Supply chain :: Attacking a target through the companies it trusts.\n      Managed service providers (MSPs) :: An MSP has privileged access to many clients; one breach reaches them all.\n      Vendors :: A compromised vendor's systems or software become a gateway into your network.\n      Suppliers :: A breach at a parts or service supplier ripples into its customers.\n    Human vectors / social engineering :: Manipulating people rather than technology.\n      Phishing :: Fraudulent email to steal credentials or money, or plant malware. Spear phishing targets specific people; whaling targets executives.\n      Vishing :: Voice phishing by phone or VoIP, often with caller-ID spoofing (\"this is the IT helpdesk\").\n      Smishing :: SMS phishing with malicious links (\"your parcel could not be delivered\").\n      Misinformation / disinformation :: False information. Misinformation is shared unknowingly; disinformation is deliberately false to manipulate.\n      Impersonation :: Pretending to be someone trusted (IT staff, an executive, a vendor) to gain access or information.\n      Business email compromise :: A compromised or spoofed executive/vendor mailbox used to trick staff into wiring money or changing payment details. !! Defence: verify payment changes out-of-band, by phone to a known number.\n      Pretexting :: Inventing a believable scenario to justify the request (\"I'm with the auditors and need...\").\n      Watering hole :: Compromising a website the target group regularly visits so their visitors get infected.\n      Brand impersonation :: Fake emails or sites copying a well-known brand (Microsoft, PayPal) to trick victims.\n      Typosquatting :: Registering look-alike domains (paypa1.com) to catch typos. Also called URL hijacking.\n  2.3 Vulnerabilities :: Explain the main types of weaknesses attackers exploit.\n    Application :: Flaws in how software handles memory, timing and updates.\n      Memory injection :: Malicious code is inserted into a running process's memory and executed from there.\n      Buffer overflow :: Input larger than the buffer overwrites adjacent memory, causing crashes or code execution. !! Defences: bounds checking, input validation, ASLR, DEP.\n      Race condition :: The outcome depends on the timing or order of events, which an attacker can manipulate.\n      TOC / TOU :: Time-of-check to time-of-use: the system checks a condition, then the state changes before it is used (for example a file swapped after its permissions are checked).\n      Malicious update :: A legitimate-looking update that carries malware or weakens security (for example a compromised vendor build).\n    Operating system :: OS flaws that allow unauthorized access, privilege escalation or code execution. Fixed by patching.\n    Web-based :: Flaws in web applications.\n      SQL injection (SQLi) :: SQL entered into an input field runs against the database, leaking or changing data or bypassing logins. Sign: ' OR 1=1 -- in input. !! Fix: parameterized queries (prepared statements) plus input validation.\n      Cross-site scripting (XSS) :: Malicious script injected into a trusted site runs in visitors' browsers and steals cookies or sessions. Stored, reflected and DOM-based variants. !! Fix: output encoding, input validation, Content Security Policy.\n    Hardware :: Weaknesses in physical devices.\n      Firmware :: Flaws in the low-level code inside devices (BIOS/UEFI, routers, drives). Hard to patch and to detect.\n      End-of-life :: The manufacturer no longer supports or patches it, so new flaws stay open forever.\n      Legacy :: Old hardware that can't run modern security features or software.\n    Virtualization :: Weaknesses in virtual machines and hypervisors.\n      VM escape :: Code inside a VM breaks out and interacts with the hypervisor or host, reaching other VMs. The most serious virtualization risk.\n      Resource reuse :: Memory or storage handed to a new VM still holds the previous tenant's data.\n    Cloud-specific :: Misconfigured storage buckets, insecure APIs, weak IAM and exposed management consoles.\n    Supply chain :: Weaknesses introduced by the providers you depend on.\n      Service provider :: A third party's poor security puts your data and access at risk.\n      Hardware provider :: Counterfeit components, implanted backdoors or tampered devices.\n      Software provider :: Vulnerable or compromised third-party products, libraries and open-source packages.\n    Cryptographic :: Weak or broken algorithms (MD5, DES, RC4), short keys or poor implementations that let data be decrypted or forged.\n    Misconfiguration :: Default settings, open permissions, unnecessary services. One of the most common causes of breaches.\n    Mobile device :: Weaknesses specific to phones and tablets.\n      Side loading :: Installing apps from outside the official store, skipping its security vetting.\n      Jailbreaking / rooting :: Removing built-in OS restrictions (jailbreak on iOS, root on Android), which disables protections.\n    Zero-day :: A vulnerability unknown to the vendor, so no patch exists. Only defence-in-depth and behaviour-based detection help.\n  2.4 Indicators of malicious activity :: Given a scenario, recognise the signs that an attack is happening or has happened.\n    Malware attacks :: General signs: slowdowns, unexpected behaviour, lost data, unexplained outbound traffic.\n      Ransomware :: Encrypts files and demands payment. Signs: files suddenly unreadable, changed extensions, a ransom note. !! Best recovery: tested offline or immutable backups.\n      Trojan :: Malware disguised as legitimate software. Signs: unknown programs running, unexplained system changes. A RAT gives remote control.\n      Worm :: Self-replicates across the network without user action. Signs: rapid spread between hosts, traffic spikes.\n      Spyware :: Secretly gathers information about the user. Signs: unauthorized outbound data, pop-ups, changed browser settings.\n      Bloatware :: Unwanted preinstalled software. Signs: wasted resources and a bigger attack surface.\n      Virus :: Attaches to files or programs and needs a user action to spread. Signs: corrupted files, odd program behaviour, boot problems.\n      Keylogger :: Records keystrokes to capture passwords and data. Signs: credentials misused elsewhere, unknown processes.\n      Logic bomb :: Code that fires when a condition or date is met (for example when an employee is removed from payroll).\n      Rootkit :: Hides deep in the OS kernel or firmware to keep privileged, invisible access. Often needs a full reimage to remove.\n    Physical attacks :: Signs of attacks on the premises.\n      Brute force :: Forcing physical entry. Signs: damaged locks, pried doors or windows.\n      RFID cloning :: Copying a badge's signal to make a duplicate. Sign: entries logged while the real holder was elsewhere.\n      Environmental :: Tampering with HVAC, power or fire systems to damage equipment or cause outages.\n    Network attacks :: Signs of attacks on the network.\n      DDoS :: Many distributed sources flood a target until legitimate users can't reach it.\n      Amplified DDoS :: A small request triggers a much larger response (DNS, NTP, memcached) aimed at the victim.\n      Reflected DDoS :: Requests spoof the victim's IP, so third-party servers \"reflect\" their replies onto the victim.\n      DNS attacks :: DNS poisoning/spoofing and domain hijacking. Signs: users redirected to the wrong sites, unauthorized record changes.\n      Wireless attacks :: Rogue APs, evil twins, deauthentication and jamming. Signs: unknown SSIDs and devices.\n      On-path attack :: Formerly man-in-the-middle: the attacker sits between two parties to read or alter traffic (ARP poisoning, rogue AP). Signs: certificate warnings, duplicate MAC addresses.\n      Credential replay :: Captured credentials, hashes or tokens are re-used to log in (pass-the-hash). Signs: valid logins from unusual sources.\n      Malicious code :: Scripts, macros or payloads moving through the network. Signs: unexpected outbound connections.\n    Application attacks :: Signs of attacks against apps.\n      Injection :: Untrusted input is interpreted as code or commands (SQL, LDAP, OS command, XML). Signs: strange input and errors in logs.\n      Buffer overflow :: Signs: application crashes and unexpected code execution.\n      Replay :: A captured valid request or session is re-sent. Signs: duplicate transactions. Fix: timestamps, nonces, session tokens.\n      Privilege escalation :: Gaining higher rights than granted. Vertical: user to admin. Horizontal: user to another user's account.\n      Forgery :: Request forgery. CSRF makes a logged-in user's browser send unwanted requests; SSRF makes the server send requests on the attacker's behalf.\n      Directory traversal :: Using ../ sequences to read files outside the web root (for example /etc/passwd).\n    Cryptographic attacks :: Attacks on the crypto itself.\n      Downgrade :: Forces a connection to fall back to an older, weaker protocol or cipher (for example TLS down to SSL 3.0).\n      Collision :: Two different inputs produce the same hash, breaking integrity checks. MD5 and SHA-1 are vulnerable.\n      Birthday attack :: Uses the birthday-paradox probability to find hash collisions far faster than brute force. Defence: longer hash outputs.\n    Password attacks :: Attacks on credentials.\n      Spraying :: A few common passwords tried against many accounts, staying under lockout limits. Sign: many accounts with one or two failures each. !! Many accounts, few passwords = spraying. One account, many passwords = brute force.\n      Brute force :: Trying every combination against one account (online) or against stolen hashes (offline). Signs: many failures, lockouts. A dictionary attack uses a wordlist.\n    General indicators :: Red flags that apply to many attacks.\n      Account lockout :: Many failed logins locked the account: brute force or spraying.\n      Concurrent session usage :: One account active in several places at once: likely stolen credentials.\n      Blocked content :: Filters or AV blocking traffic or files: possibly malware trying to call home or download payloads.\n      Impossible travel :: Logins from distant places too close together in time (London, then Sydney 20 minutes later).\n      Resource consumption :: Unexplained CPU, memory or bandwidth spikes: crypto-mining, DDoS or exfiltration.\n      Resource inaccessibility :: Files or services suddenly unavailable: ransomware or DoS.\n      Out-of-cycle logging :: Log activity at unusual times, such as admin actions at 3 a.m.\n      Published / documented :: Your data or vulnerability appears publicly (leak sites, paste sites, advisories).\n      Missing logs :: Gaps or deleted logs: an attacker covering their tracks.\n  2.5 Mitigation techniques :: Explain the purpose of the techniques used to secure the enterprise.\n    Segmentation :: Splitting the network into zones (VLANs, subnets) so a breach in one can't easily spread to others.\n    Access control :: Defining who can do what.\n      Access control list (ACL) :: An ordered list of allow/deny rules for a resource or network interface.\n      Permissions :: Specific rights a user has on a resource: read, write, execute, modify, delete.\n    Application allow list :: Only approved applications may run; everything else is blocked. Stronger than a deny list.\n    Isolation :: Separating a system or process completely so a compromise can't affect others (for example quarantining an infected host).\n    Patching :: Applying updates to fix known vulnerabilities and shrink the attack surface.\n    Encryption :: Makes stolen data unreadable without the key; protects data at rest and in transit.\n    Monitoring :: Watching activity and traffic so suspicious behaviour is detected and acted on quickly.\n    Least privilege :: Users and services get only the minimum access they need, limiting insider damage and what an attacker inherits.\n    Configuration enforcement :: Ensuring systems match approved secure baselines (Group Policy, MDM, configuration tools).\n    Decommissioning :: Retiring systems safely, including wiping data, so forgotten old systems don't become weak points.\n    Hardening techniques :: Reducing the attack surface of individual systems.\n      Encryption :: Encrypt data at rest and in transit on the host.\n      Endpoint protection :: Install EDR or anti-malware for real-time threat protection.\n      Host-based firewall :: Filters inbound and outbound traffic on the machine itself.\n      HIPS :: Host-based Intrusion Prevention System: detects and blocks malicious activity on the host.\n      Disabling ports / protocols :: Turn off unused ports and insecure protocols (Telnet, FTP, SMBv1).\n      Default password changes :: Replace every factory-default credential before deployment.\n      Removing unnecessary software :: Uninstall unused apps and services; less code means fewer vulnerabilities.\n3 Security Architecture :: Architecture models, securing enterprise infrastructure, protecting data and building resilience.\n  3.1 Architecture models :: Compare and contrast the security implications of different architecture models.\n    Cloud :: Shared responsibility: the provider secures the cloud itself, the customer secures what they put in it.\n      Responsibility matrix :: Spells out who secures what. IaaS: customer manages OS, apps and data. PaaS: customer manages apps and data. SaaS: customer mainly manages data and access. !! Data and user access are always the customer's responsibility.\n      Hybrid considerations :: Mixing on-premises and cloud adds complexity: consistent policies, identity and visibility across both.\n      Third-party vendors :: More vendors mean more risk, though some responsibility shifts to them by contract.\n    Infrastructure as code (IaC) :: Infrastructure defined in code templates. Fast, consistent and repeatable, but a single mistake is replicated everywhere instantly.\n    Serverless :: Run functions without managing servers. Less infrastructure to secure, more dependence on the provider; focus on code and permissions.\n    Microservices :: An app split into small independent services. A breach is contained to one service, but many APIs between them add attack surface.\n    Network infrastructure :: How the network is built and separated.\n      Physical isolation (air gap) :: No connection to outside networks at all. Strong protection, but still exposed to USB and insider threats.\n      Logical segmentation :: VLANs, subnets and firewall rules separate traffic on shared hardware to contain breaches.\n      Software-defined networking (SDN) :: Network control is separated from the hardware and managed centrally in software. Flexible and programmable, but misconfiguration spreads quickly.\n    On-premises :: Full control of the infrastructure and full responsibility for securing all of it.\n    Centralized vs decentralized :: Centralized gives one point of control but also a single point of failure. Decentralized spreads risk but is harder to manage consistently.\n    Containerization :: Lightweight isolated app packages sharing the host OS kernel (Docker). Efficient, but a kernel flaw or vulnerable image affects them all.\n    Virtualization :: Multiple VMs on one host. Good isolation and resource use, but a hypervisor flaw (VM escape) affects every VM.\n    IoT :: Huge numbers of devices with weak security, default credentials and rare updates expand the attack surface.\n    ICS / SCADA :: Industrial control systems that run critical infrastructure (power, water, factories). A breach can cause physical harm; isolate them.\n    RTOS :: Real-time operating systems where timing is critical, so patching and downtime are difficult.\n    Embedded systems :: Purpose-built devices with limited security features that are hard or impossible to update.\n    High availability :: Redundant systems for uptime. Resilient, but redundant copies can replicate vulnerabilities and need synchronization.\n    Considerations :: What to weigh when choosing a model.\n      Availability :: Can it be reached when needed?\n      Resilience :: Can it withstand and recover from attacks or failures?\n      Cost :: Purchase, running and staffing costs versus benefit.\n      Responsiveness :: How quickly does it react to demand or threats?\n      Scalability :: Can it grow (or shrink) with demand?\n      Ease of deployment :: How simple is it to roll out?\n      Risk transference :: Can some risk be shifted to someone else, such as a cloud provider?\n      Ease of recovery :: How easily can it be restored after an incident?\n      Patch availability :: Does the vendor supply security updates regularly?\n      Inability to patch :: Are there constraints (embedded, RTOS, ICS, legacy) that prevent patching? Then use compensating controls such as isolation.\n      Power :: Does it fit the available power, and will it keep running when power is lost?\n      Compute :: Does it have enough processing capacity for the workload?\n  3.2 Secure enterprise infrastructure :: Given a scenario, apply security principles to secure enterprise infrastructure.\n    Infrastructure considerations :: Where devices go and how they behave.\n      Device placement :: Put critical devices in secured, monitored locations, and security devices where they can see the right traffic.\n      Security zones :: Separate areas by trust level, for example internal, DMZ (screened subnet) for public-facing services, and guest.\n      Attack surface :: Remove unnecessary services, ports and software to cut the number of entry points.\n      Connectivity :: Secure every connection, especially links carrying sensitive data.\n      Failure modes :: What a security device does when it fails.\n        Fail-open :: Traffic keeps flowing when the device fails. Chosen when availability matters most.\n        Fail-closed :: Traffic is blocked when the device fails. Chosen when security matters most. !! Fail-open favours availability; fail-closed favours confidentiality and security.\n      Device attributes :: How a device interacts with traffic.\n        Active vs passive :: Active devices take action on traffic (IPS, firewall); passive devices only watch and alert (IDS).\n        Inline vs tap/monitor :: Inline devices sit in the traffic path and can block. Tap/monitor (SPAN port) devices receive a copy and can only observe. !! IPS = inline + active. IDS = tap/monitor + passive.\n    Network appliances :: Common security devices.\n      Jump server :: A hardened host admins connect to first, then reach protected systems from it. One controlled, logged entry point.\n      Proxy server :: Intermediary for requests. Forward proxy filters users' outbound web traffic; reverse proxy sits in front of servers.\n      IDS / IPS :: Intrusion Detection System alerts; Intrusion Prevention System also blocks. Signature-based or anomaly-based.\n      Load balancer :: Distributes traffic across several servers for performance and availability.\n      Sensors :: Collect traffic or event data from network segments and feed it to the IDS or SIEM.\n    Port security :: Control which devices can use a switch port.\n      802.1X :: Port-based network access control. Supplicant (device) talks to authenticator (switch/AP), which checks with the authentication server (RADIUS). The port stays closed until authentication succeeds.\n      EAP :: Extensible Authentication Protocol: the framework 802.1X uses. EAP-TLS (certificates on both sides, strongest), PEAP and EAP-TTLS (server certificate + tunnel), EAP-FAST.\n    Firewall types :: Different firewalls for different layers.\n      WAF :: Web Application Firewall: inspects HTTP/HTTPS to block web attacks like SQLi and XSS.\n      UTM :: Unified Threat Management: one appliance combining firewall, IPS, AV, web filtering and VPN. Common in small businesses.\n      NGFW :: Next-generation firewall: deep packet inspection that identifies applications and users, not just ports and protocols.\n      Layer 4 vs Layer 7 :: Layer 4 filters on IP addresses, ports and protocol. Layer 7 understands the application content itself.\n    Secure communication / access :: Protecting traffic between sites and users.\n      VPN :: Encrypted tunnel over an untrusted network. Remote-access (user to network) or site-to-site.\n      Remote access :: Letting users reach internal resources from elsewhere; needs strong authentication (MFA) and encryption.\n      TLS tunneling :: TLS-based VPNs work over port 443 and get through most firewalls.\n      IPsec :: Secures IP traffic. AH gives integrity and authentication only; ESP adds encryption. Tunnel mode protects the whole packet (site-to-site); transport mode protects the payload (host-to-host).\n      SD-WAN :: Software-defined WAN: intelligently routes traffic across multiple links (broadband, MPLS, LTE) for performance and reliability.\n      SASE :: Secure Access Service Edge: cloud service combining networking (SD-WAN) with security (SWG, CASB, ZTNA, firewall) delivered close to users.\n    Selection of effective controls :: Choose controls based on risk assessment, balancing security, usability and cost. Layer them (defence in depth) so if one fails another still protects.\n  3.3 Protecting data :: Compare and contrast concepts and strategies to protect data.\n    Data types :: What kind of data it is.\n      Regulated :: Governed by law or regulation: personal data (GDPR), health data (HIPAA), card data (PCI DSS).\n      Trade secret :: Confidential business know-how that gives a competitive edge, such as a recipe or manufacturing process.\n      Intellectual property :: Creations of the mind: inventions, designs, logos, code. Protected by patents, copyright and trademarks.\n      Legal information :: Contracts, court documents and other legal records.\n      Financial information :: Bank details, transaction records, financial statements.\n      Human vs non-human readable :: Human-readable data (text, documents) can be read directly; non-human-readable data (binary, barcodes, encoded) needs a machine to interpret.\n    Classifications :: Labels that decide how data is handled.\n      Sensitive :: Harmful if disclosed, such as PII.\n      Confidential :: Restricted to specific people or groups inside the organisation.\n      Public :: Free for anyone to see; no confidentiality needed.\n      Restricted :: The tightest access, limited for regulatory, legal or ethical reasons.\n      Private :: Personal information belonging to individuals, kept within the organisation.\n      Critical :: Essential to operations; losing it would cause severe disruption.\n    Data states :: Where the data is right now.\n      Data at rest :: Stored on disk, database or backup. Protect with FDE, database encryption and permissions.\n      Data in transit :: Moving across a network. Protect with TLS, IPsec and VPNs.\n      Data in use :: Being processed in memory or CPU. Protect with secure enclaves and access controls.\n    Data sovereignty :: Data is subject to the laws of the country where it is physically stored.\n    Geolocation :: The physical location of data (or users), which determines which laws apply and can drive access rules.\n    Methods to secure data :: Techniques and where they fit.\n      Geographic restrictions :: Limit where data can be stored or accessed from (for example EU data only in EU regions).\n      Encryption :: Converts data to ciphertext so only key holders can read it. Reversible with the key.\n      Hashing :: Fixed-length, one-way value. Used to store passwords and verify integrity; cannot be reversed.\n      Masking :: Hides part of the data on display (****1234). The underlying data may still exist intact.\n      Tokenization :: Replaces data with a meaningless token; the real value is stored in a separate secure vault.\n      Obfuscation :: Deliberately makes code or data hard to understand, without true encryption.\n      Segmentation :: Keeps sensitive data on separate network segments or systems.\n      Permission restrictions :: Defines exactly who can access data and what they can do with it.\n  3.4 Resilience and recovery :: Explain the importance of resilience and recovery in security architecture.\n    High availability :: Keeping systems operational and minimizing downtime.\n      Load balancing :: Spreads traffic across several servers so none is overloaded; servers work in parallel (active/active).\n      Clustering :: Linked servers that act as one; if a node fails another takes over its work (failover). !! Load balancing = share the work. Clustering = take over the work.\n    Site considerations :: Recovery sites if the primary site is lost.\n      Hot site :: Fully equipped with near real-time data; takes over in minutes to hours. Most expensive.\n      Warm site :: Has hardware and fairly recent data; needs some setup time (hours to days). Middle cost.\n      Cold site :: Space, power and cooling but no ready equipment or data; takes days to weeks. Cheapest.\n      Geographic dispersion :: Sites far enough apart that one regional disaster can't hit them all.\n    Platform diversity :: Using different OSs or vendors so a single vulnerability can't take everything down.\n    Multi-cloud :: Using more than one cloud provider so one provider's outage doesn't stop operations.\n    Continuity of operations :: Plans that keep essential functions running during a disruption.\n    Capacity planning :: Having enough resources to handle demand and recovery.\n      People :: Enough trained staff, with cross-training and succession plans.\n      Technology :: Enough hardware, software and cloud capacity, able to scale.\n      Infrastructure :: Physical and network facilities that can support recovery operations.\n    Testing :: Proving that recovery plans actually work. Ordered from least to most disruptive: tabletop, simulation, parallel, failover.\n      Tabletop exercise :: Discussion-based walkthrough of a scenario; no systems are touched. Cheapest and least disruptive.\n      Failover :: Actually switching to backup systems to prove they take over.\n      Simulation :: Mimics a real event in a controlled way to test people and systems.\n      Parallel processing :: Run the backup system alongside the primary and compare outputs, without stopping production.\n    Backups :: Copies of data for recovery.\n      Onsite / offsite :: Onsite allows fast restores; offsite (or cloud) survives a site disaster. Keep both.\n      Frequency :: How often backups run; it sets how much data you can lose (RPO).\n      Encryption :: Encrypt backups so stolen media are unreadable.\n      Snapshots :: Point-in-time image of a system or VM, quick to take and restore.\n      Recovery :: Restoring from backup. Test restores regularly; an untested backup is not a backup.\n      Replication :: Copies data to another location in real or near-real time. Fast recovery, but corruption or deletion replicates too.\n      Journaling :: Logs every change so data can be restored to a precise point in time.\n    Power :: Keeping systems powered through outages.\n      Generators :: Supply power during long outages; need fuel and a few seconds to start.\n      UPS :: Uninterruptible power supply: battery that gives instant power for short outages or until generators start.\n4 Security Operations :: The biggest domain: hardening, asset and vulnerability management, monitoring, IAM, automation, incident response and investigations.\n  4.1 Securing computing resources :: Given a scenario, apply common security techniques to computing resources.\n    Secure baselines :: A documented standard configuration that defines the required security settings.\n      Establish :: Define the secure settings, often starting from CIS Benchmarks or vendor guides.\n      Deploy :: Push the baseline to systems with Group Policy, MDM or configuration management tools.\n      Maintain :: Review and update the baseline as threats, software and best practices change; watch for drift.\n    Hardening targets :: What to harden on each kind of device.\n      Mobile devices :: Encryption, biometric or PIN lock, auto-lock, MDM, remote wipe.\n      Workstations :: Endpoint protection, disable unneeded services, regular patching, host firewall.\n      Switches and routers :: Change default credentials, disable unused ports, use SSH and SNMPv3 instead of Telnet and SNMPv1.\n      Cloud infrastructure :: Strong IAM, encryption at rest and in transit, security groups, no public storage buckets.\n      Servers :: Minimal open ports, IDS/IPS, regular patching, only required roles installed.\n      ICS / SCADA and embedded :: Isolate from regular networks, update firmware where possible, protect with firewalls.\n      RTOS and IoT :: Change default credentials, update firmware, disable unnecessary services, segment them onto their own network.\n    Wireless devices :: Installation considerations for Wi-Fi.\n      Site survey :: Physically assess the environment to plan AP placement and find interference and rogue APs.\n      Heat map :: Visual map of signal strength across an area; shows dead spots and signal leaking outside the building.\n    Mobile solutions :: Managing phones and tablets.\n      MDM :: Mobile Device Management: enforces policies, pushes apps, encrypts, locates and remotely wipes devices.\n      BYOD :: Bring Your Own Device: employees use personal devices. Cheapest, least company control. Containerization separates work data.\n      COPE :: Corporate-Owned, Personally Enabled: company device that the user may also use personally. Most company control.\n      CYOD :: Choose Your Own Device: the user picks from an approved list; the company owns and manages it.\n      Connection methods :: Cellular, Wi-Fi and Bluetooth each need securing; disable what isn't needed and avoid open Wi-Fi.\n    Wireless security settings :: How Wi-Fi is secured.\n      WPA3 :: Current Wi-Fi security. Uses SAE (instead of WPA2's PSK) to resist offline password cracking, and gives forward secrecy.\n      AAA / RADIUS :: WPA2/WPA3-Enterprise authenticates each user against a RADIUS server via 802.1X instead of one shared password.\n      Cryptographic protocols :: Encrypt the wireless traffic, for example CCMP with AES in WPA2 and GCMP in WPA3.\n      Authentication protocols :: Verify users and devices before they join, for example EAP-TLS and PEAP.\n    Application security :: Building software without exploitable flaws.\n      Input validation :: Check that all input is the expected type, length and format; done server-side. Stops injection and overflows.\n      Secure cookies :: Set the Secure flag (HTTPS only) and HttpOnly flag (no JavaScript access) so session cookies are harder to steal.\n      Static code analysis :: Reviews source code for vulnerabilities without running it (SAST).\n      Code signing :: The developer digitally signs code so users can verify who published it and that it hasn't been altered.\n    Sandboxing :: Running apps or suspicious files in an isolated environment so any harm can't spread.\n    Monitoring :: Continuously watching systems, networks and applications for anomalies, intrusions and failures.\n  4.2 Asset management :: Explain the security implications of proper hardware, software and data asset management.\n    Acquisition / procurement :: Buying securely.\n      Vendor trustworthiness :: Buy from reputable sources to avoid counterfeit or tampered products.\n      Secure defaults :: Prefer products that ship with secure settings enabled.\n      Licensing :: Legitimate licences avoid legal problems and pirated software that may carry malware.\n    Assignment / accounting :: Knowing who is responsible.\n      Ownership :: Every asset has a named owner accountable for its updates and security.\n      Classification :: Label assets by sensitivity so the right controls are applied.\n    Monitoring / asset tracking :: Knowing what you have.\n      Inventory :: A current list of all assets, so unauthorized devices stand out. You can't secure what you don't know about.\n      Enumeration :: Actively discovering what is on the network (for example with scans) to find unknown or rogue assets.\n    Disposal / decommissioning :: Getting rid of assets safely.\n      Sanitization :: Securely erasing data (overwriting, cryptographic erase) so the device can be reused or sold.\n      Destruction :: Physically destroying media (shredding, pulverizing, degaussing) when data is too sensitive to sanitize.\n      Certification :: A certificate of destruction or sanitization proves disposal was done properly, often required for compliance.\n      Data retention :: Keep data only as long as required by policy or law, then destroy it; old data is a liability.\n  4.3 Vulnerability management :: Explain the activities in the vulnerability management lifecycle: identify, analyze, respond, validate, report.\n    Identification methods :: Finding vulnerabilities.\n      Vulnerability scan :: Automated tool checks systems for known vulnerabilities. Credentialed scans see more than non-credentialed ones.\n      Static analysis :: Examines source code without running it (SAST).\n      Dynamic analysis :: Tests the running application (DAST), including fuzzing, to find runtime flaws.\n      Package monitoring :: Tracks third-party libraries and dependencies for newly published vulnerabilities (SCA, SBOM).\n      OSINT :: Open-source intelligence: public sources such as news, social media and advisories.\n      Proprietary / third-party feeds :: Paid commercial threat intelligence feeds.\n      Information-sharing organizations :: Groups that share threat data within a sector, such as ISACs.\n      Dark web :: Monitoring underground forums and markets where stolen data and exploits are traded.\n      Penetration testing :: Authorized simulated attacks that exploit vulnerabilities to prove real risk.\n      Responsible disclosure / bug bounty :: External researchers report bugs privately; bug bounty programs pay them for valid findings.\n      System / process audit :: Reviewing systems and processes against standards to find security gaps.\n    Analysis :: Deciding which findings matter.\n      False positive :: Reported as a vulnerability but isn't one. Wastes time. !! False positive = false alarm. False negative = missed real threat (the more dangerous one).\n      False negative :: A real vulnerability that the scan missed. Dangerous because nobody knows.\n      Prioritize :: Fix the highest impact and most exploitable issues first.\n      CVSS :: Common Vulnerability Scoring System: rates severity 0 to 10 (critical is 9.0 or higher).\n      CVE :: Common Vulnerabilities and Exposures: a public list giving each known vulnerability a unique ID (CVE-2024-12345).\n      Vulnerability classification :: Grouping findings by type (injection, misconfiguration, outdated software) to spot patterns.\n      Exposure factor :: The percentage of an asset's value lost if the vulnerability is exploited.\n      Environmental variables :: Your own context changes the real severity, for example whether the system is internet-facing.\n      Industry / organizational impact :: How a vulnerability specifically affects your sector or business.\n      Risk tolerance :: How much risk the organisation will accept; findings above it must be fixed.\n    Response and remediation :: Dealing with the vulnerability.\n      Patching :: Applying the vendor's fix. The most common remediation.\n      Insurance :: Cyber insurance transfers some of the financial impact.\n      Segmentation :: Isolating the vulnerable system to limit who can reach it.\n      Compensating controls :: Other protections used when patching isn't possible (WAF rule, isolation, extra monitoring).\n      Exceptions and exemptions :: A formal, documented decision not to fix for now because of business needs, with risk accepted.\n    Validation of remediation :: Proving the fix worked.\n      Rescanning :: Scan again to confirm the vulnerability is gone.\n      Audit :: Independent review confirming remediation was done properly.\n      Verification :: Checking (manually or with tests) that the fix is effective and broke nothing.\n    Reporting :: Keep stakeholders updated on findings, actions, status and trends.\n  4.4 Alerting and monitoring :: Explain security alerting and monitoring concepts and tools.\n    Monitoring computing resources :: What to watch.\n      Systems :: Operating systems and server hardware: intrusions, failures, misuse.\n      Applications :: Software behaviour, errors and unauthorized access.\n      Infrastructure :: Routers, switches, firewalls and other network devices.\n    Activities :: What monitoring involves.\n      Log aggregation :: Collecting logs from many sources into one central place (usually a SIEM) for correlation.\n      Alerting :: Notifications when an event or pattern indicates a possible incident.\n      Scanning :: Proactively checking for vulnerabilities and misconfigurations.\n      Reporting :: Summaries of monitoring results for management, audits and compliance.\n      Archiving :: Storing logs long-term for compliance and future forensic investigations.\n      Quarantine :: Isolating a compromised system or file so the threat can't spread.\n      Alert tuning :: Adjusting rules and thresholds to cut false positives without missing real threats.\n    Tools :: Common monitoring tools.\n      SCAP :: Security Content Automation Protocol: standards that let tools share vulnerability and configuration data in a common format and automate compliance checks.\n      Benchmarks :: Standardized secure configuration guides (for example CIS Benchmarks) used to check systems.\n      Agents / agentless :: Agent-based monitoring installs software on the host (deeper data); agentless collects remotely (nothing to install).\n      SIEM :: Security Information and Event Management: aggregates and correlates logs in real time and alerts on threats. Splunk, ArcSight, LogRhythm. !! Need to correlate events from many sources? SIEM.\n      Antivirus :: Detects, blocks and removes malware on endpoints.\n      DLP :: Data Loss Prevention: spots and blocks sensitive data leaving, whether in use, in motion or at rest.\n      SNMP traps :: Alerts a managed device sends unprompted to the management system when something significant happens.\n      NetFlow :: Records traffic metadata (who talked to whom, when, how much) without capturing payloads.\n      Vulnerability scanners :: Check systems for known vulnerabilities: Nessus, Qualys, OpenVAS.\n  4.5 Enhancing enterprise security :: Given a scenario, modify enterprise capabilities to enhance security.\n    Firewall :: Tightening the firewall.\n      Rules :: Review regularly; ordered top-down, first match wins; end with an implicit deny.\n      Access lists :: Allow only the IPs or ranges that genuinely need access.\n      Ports / protocols :: Open only the ports needed for business functions.\n      Screened subnets :: DMZ that holds public-facing servers, separated from the internal network.\n    IDS / IPS :: Detecting and stopping intrusions.\n      Trends :: Track evolving attack patterns and adjust detection accordingly.\n      Signatures :: Update signatures regularly to catch known threats. Anomaly-based detection catches new ones but has more false positives.\n    Web filter :: Controlling web access.\n      Agent-based :: An agent on each endpoint enforces filtering, even off the corporate network.\n      Centralized proxy :: All web traffic goes through a central proxy that monitors and filters it.\n      URL scanning :: Checks URLs for malicious content before allowing access.\n      Content categorization :: Blocks sites by category (gambling, malware, adult).\n      Block rules :: Explicitly blocks known bad sites.\n      Reputation :: Blocks sites with poor reputation scores.\n    Operating system security :: OS-level controls.\n      Group Policy :: Centrally enforces security settings across Windows domain computers via GPOs.\n      SELinux :: Security-Enhanced Linux: mandatory access control giving fine-grained control over what processes can do.\n    Secure protocols :: Choosing secure versions.\n      Protocol selection :: Pick the encrypted version: HTTPS not HTTP, SSH not Telnet, SFTP not FTP.\n      Port selection :: Use the standard secure ports so traffic can be filtered properly.\n      Transport method :: Use encrypted transport such as TLS.\n      Ports cheat sheet :: Insecure and secure versions of common protocols.\n        Web :: HTTP 80, replaced by HTTPS 443.\n        Remote shell :: Telnet 23, replaced by SSH 22.\n        File transfer :: FTP 20/21, replaced by SFTP 22 (over SSH) or FTPS 989/990 (over TLS).\n        Email sending :: SMTP 25, replaced by SMTPS 465 or submission with STARTTLS 587.\n        Email retrieval :: POP3 110 to POP3S 995. IMAP 143 to IMAPS 993.\n        Directory :: LDAP 389, replaced by LDAPS 636.\n        Name resolution :: DNS 53; DNSSEC adds integrity, DNS over HTTPS (443) adds confidentiality.\n        Management :: SNMPv1/v2 on 161/162 are insecure; use SNMPv3 (authentication + encryption).\n        Remote desktop and voice :: RDP 3389. SIP 5060 to secure SIP 5061. RTP to SRTP.\n    DNS filtering :: Blocks lookups of domains known for malware or phishing.\n    Email security :: Stopping spoofing and malicious mail. !! SPF = which servers may send. DKIM = the message was signed and not altered. DMARC = what to do when they fail, plus reporting.\n      SPF :: Sender Policy Framework: a DNS record listing the mail servers allowed to send for the domain.\n      DKIM :: DomainKeys Identified Mail: a digital signature in the email header, verified with a public key in DNS, proving the message wasn't altered.\n      DMARC :: Builds on SPF and DKIM: tells receivers what to do with failures (none, quarantine, reject) and sends reports.\n      Gateway :: An email security gateway filters spam, phishing and malicious attachments before delivery.\n    File integrity monitoring (FIM) :: Alerts when critical files change unexpectedly, by comparing hashes.\n    DLP :: Monitors and blocks unauthorized transfers of sensitive data (email, USB, cloud uploads).\n    Network access control (NAC) :: Only authenticated, compliant devices (patched, AV running) may join the network; others are quarantined.\n    EDR / XDR :: Detection and response tools.\n      EDR :: Endpoint Detection and Response: monitors endpoints for malicious behaviour and can isolate the host and roll back changes.\n      XDR :: Extended Detection and Response: correlates data from endpoints, network, cloud and email in one place.\n    User behavior analytics (UBA) :: Learns normal user behaviour and flags anomalies that suggest compromised accounts or insiders.\n  4.6 Identity and access management :: Given a scenario, implement and maintain identity and access management.\n    Account lifecycle :: Creating, changing and removing access.\n      Provisioning / de-provisioning :: Create accounts when people join; remove or disable them immediately when they leave.\n      Permission assignments :: Grant only what the role needs, for example read-only on production for a developer.\n      Identity proofing :: Verify who someone really is (ID documents, knowledge questions, biometrics) before issuing credentials.\n      Attestation :: Periodic review where managers confirm each user's access is still appropriate. Catches privilege creep.\n    Federation and SSO :: One identity, many services.\n      Federation :: Trust between organisations or providers so a user's home identity provider vouches for them elsewhere.\n      Single sign-on (SSO) :: Log in once to access many services. One credential is convenient, but becomes a single point of compromise.\n      LDAP :: Lightweight Directory Access Protocol: queries directories such as Active Directory. LDAPS secures it with TLS.\n      SAML :: XML-based standard that passes authentication assertions from an identity provider to a service provider. Common for web SSO.\n      OAuth :: Authorization framework: grants an app limited access to your resources without sharing your password (\"Sign in with Google\" uses OAuth with OpenID Connect). !! SAML = authentication assertions (XML). OAuth = authorization (tokens). OpenID Connect adds authentication on top of OAuth.\n      Interoperability :: IAM systems must work together across partners and platforms by using common standards.\n    Access controls :: Models that decide who can access what.\n      Mandatory (MAC) :: Labels and clearances set by the system/admin (Top Secret, Secret). Users cannot change them. Military and government.\n      Discretionary (DAC) :: The owner of a resource decides who gets access (typical file sharing). Flexible but less secure.\n      Role-based (RBAC) :: Access is based on job role or group (HR, Finance). Easy to manage at scale.\n      Rule-based :: Access is decided by system-wide rules, such as firewall rules or time-of-day restrictions.\n      Attribute-based (ABAC) :: Decisions use many attributes: user, resource, action and environment (department, location, device). The most granular.\n      Time-of-day restrictions :: Access allowed only during set hours.\n      Least privilege :: Give only the minimum access needed for the job.\n    Multifactor authentication :: Two or more different factor types. Two passwords are still just one factor.\n      Something you know :: Password, PIN, security question.\n      Something you have :: Hardware token, smart card, phone with authenticator app, security key.\n      Something you are :: Biometrics: fingerprint, face, iris, voice.\n      Somewhere you are :: Location, such as GPS or IP geolocation.\n      Implementations :: Biometrics; hard tokens (key fobs); soft tokens (authenticator apps generating TOTP codes); security keys (FIDO2/WebAuthn).\n    Password concepts :: Good password policy.\n      Length and complexity :: Length matters most; complexity mixes character types.\n      Reuse, expiration and age :: Block reuse of old passwords; expiration forces changes; minimum age stops users cycling straight back to an old password.\n      Password managers :: Generate and store unique strong passwords for every account.\n      Passwordless :: Authenticate with biometrics, security keys or passkeys instead of passwords, removing phishing-able secrets.\n    Privileged access management (PAM) :: Controlling admin accounts.\n      Just-in-time permissions :: Elevated access granted only when needed and removed automatically afterwards.\n      Password vaulting :: Admin credentials are stored in a vault, checked out when needed and rotated automatically.\n      Ephemeral credentials :: Temporary credentials that expire after use or a short time.\n  4.7 Automation and orchestration :: Explain the importance of automation and orchestration for secure operations. SOAR tools tie them together.\n    Use cases :: What gets automated.\n      User provisioning :: Automatically create and remove accounts and access on joining and leaving.\n      Resource provisioning :: Automatically spin up VMs, storage and networks based on demand.\n      Guard rails :: Automated limits that keep actions within approved policy (for example blocking public storage buckets).\n      Security groups :: Automatically configure network security groups by rule or in response to events.\n      Ticket creation :: Open tickets automatically when alerts fire.\n      Escalation :: Raise critical issues automatically by severity or when not handled in time.\n      Enabling / disabling services and access :: Automatically grant or revoke access in response to policy or events.\n      Continuous integration and testing :: Every code change is automatically built and security-tested.\n      Integrations and APIs :: APIs connect different tools so workflows run end to end.\n    Benefits :: Why it helps.\n      Efficiency / time saving :: Removes manual, repetitive work.\n      Enforcing baselines :: Systems stay consistently on the secure baseline.\n      Standard infrastructure configurations :: Uniform builds remove inconsistent settings that lead to vulnerabilities.\n      Scaling securely :: Security policy is applied uniformly as the organisation grows.\n      Employee retention :: Less tedious work keeps staff engaged.\n      Reaction time :: Automated responses are much faster than humans.\n      Workforce multiplier :: A small team can manage a large environment.\n    Other considerations :: Downsides to weigh.\n      Complexity :: Automation tools themselves can be complex to build and maintain.\n      Cost :: Upfront investment, often recovered over time.\n      Single point of failure :: Relying on one automation tool means its failure stops everything.\n      Technical debt :: Rushed or ad-hoc scripts make future changes harder.\n      Ongoing supportability :: Scripts must be maintained as tools and platforms change.\n  4.8 Incident response :: Explain appropriate incident response activities.\n    Process :: The incident response lifecycle, in order. !! Order: Preparation, Detection, Analysis, Containment, Eradication, Recovery, Lessons learned. Containment always comes before eradication.\n      1 Preparation :: IR policy and plan, a trained team with clear roles, communication plan, tools ready.\n      2 Detection :: Spot the incident through monitoring, IDS/IPS, SIEM alerts, log reviews or user reports.\n      3 Analysis :: Confirm it's real; determine scope, severity and impact; use forensic tools.\n      4 Containment :: Stop the spread. Short-term: isolate hosts immediately. Long-term: secure the environment while preparing the fix.\n      5 Eradication :: Remove the root cause: malware, compromised accounts, vulnerabilities. Clean or rebuild systems.\n      6 Recovery :: Restore systems to normal operation, validate they work and monitor for reinfection.\n      7 Lessons learned :: Post-incident review: what happened, what worked, what to improve. Update the IR plan.\n    Training :: Regular IR team training on current threats, plus staff awareness on reporting suspicious activity promptly.\n    Testing :: Exercising the plan.\n      Tabletop exercise :: Discussion-based: the team talks through a hypothetical scenario and their decisions. No systems touched.\n      Simulation :: A practice incident in a controlled environment to test the plan in action.\n    Root cause analysis :: Find the underlying reason the incident happened so it doesn't happen again.\n    Threat hunting :: Proactively searching for hidden attackers that haven't triggered any alerts yet. Assumes compromise.\n    Digital forensics :: Handling evidence so it holds up.\n      Legal hold :: Instruction to preserve all data relevant to a legal case; normal deletion and retention policies are suspended.\n      Chain of custody :: Documented record of everyone who handled the evidence, when and why. Proves it wasn't tampered with.\n      Acquisition :: Collecting evidence, most volatile first: CPU cache and registers, RAM, swap, disk, logs, backups. Take forensic images and hash them. !! Order of volatility: capture RAM before powering off or imaging the disk.\n      Reporting :: Documenting the forensic findings and methods.\n      Preservation :: Keeping evidence intact and unaltered: write blockers, hashes, secure storage.\n      E-discovery :: Finding, securing and searching electronic data to produce as evidence in a legal case.\n  4.9 Data sources for investigations :: Given a scenario, use data sources to support an investigation.\n    Log data :: Logs and what each shows.\n      Firewall logs :: Allowed and blocked connections; which internal hosts talked to a suspicious IP.\n      Application logs :: App errors, logins and unauthorized access attempts.\n      Endpoint logs :: Malware detections, process executions and user activity on hosts.\n      OS-specific security logs :: Logins, privilege use, attempts to disable security (Windows Security event log, Linux auth.log).\n      IPS / IDS logs :: Alerts on known attack patterns, command-and-control traffic and exfiltration.\n      Network logs :: Traffic volumes and flows from routers and switches; unusual patterns or sources.\n      Metadata :: Data about data: file timestamps and authors, email headers, image EXIF. Shows when, how and by whom.\n    Data sources :: Other evidence.\n      Vulnerability scans :: Show which affected systems had weaknesses the attacker may have exploited.\n      Automated reports :: Scheduled reports that may highlight anomalies or policy violations around the incident time.\n      Dashboards :: Summarized real-time view of alerts and metrics; quick overview of what stands out.\n      Packet captures :: Full raw traffic (PCAP): shows exactly what data was sent, such as exfiltrated files or C2 commands. !! Need to see the actual content of the traffic? Packet capture. Just who talked to whom? NetFlow.\n5 Security Program Management and Oversight :: Governance, risk management, third parties, compliance, audits and security awareness.\n  5.1 Security governance :: Summarize the elements of effective security governance. !! Policy = high-level \"what and why\" (mandatory). Standard = specific mandatory requirement. Procedure = step-by-step \"how\". Guideline = optional advice.\n    Guidelines :: Recommended best practices; flexible and not mandatory.\n    Policies :: High-level, mandatory statements of management intent.\n      Acceptable use policy (AUP) :: What users may and may not do with company systems. Usually signed at onboarding.\n      Information security policy :: The overarching policy for protecting the confidentiality, integrity and availability of information.\n      Business continuity :: Keeping critical business functions running during a disruption.\n      Disaster recovery :: Restoring IT systems and data after a disaster.\n      Incident response :: How the organisation detects, responds to and recovers from security incidents.\n      SDLC :: Building security into every phase of the software development lifecycle.\n      Change management :: How changes are requested, approved, tested and implemented.\n    Standards :: Specific, mandatory requirements that support policies.\n      Password :: Required length, complexity, rotation and storage (hashing).\n      Access control :: Who may access what, and how access is granted and reviewed.\n      Physical security :: Requirements for securing buildings, rooms and equipment.\n      Encryption :: Approved algorithms and key lengths, and when encryption is required.\n    Procedures :: Step-by-step instructions for specific tasks.\n      Change management :: The exact steps for submitting and implementing a change.\n      Onboarding / offboarding :: Steps for granting access to new staff and promptly removing it from leavers.\n      Playbooks :: Step-by-step response guides for specific incident types (for example a phishing playbook).\n    External considerations :: Outside forces that shape governance.\n      Regulatory :: Industry regulations (HIPAA for healthcare, SOX and GLBA for finance).\n      Legal :: Laws such as data protection and privacy legislation.\n      Industry :: Industry standards like PCI DSS for card payments.\n      Local, national and global :: Requirements differ by city/state, country and internationally (for example GDPR).\n    Monitoring and revision :: Review governance documents regularly and update them as the business, technology and threats change.\n    Governance structures :: Who makes decisions.\n      Boards :: Senior leaders responsible for strategic direction and oversight.\n      Committees :: Groups focused on specific areas, such as audit or IT steering.\n      Government entities :: Oversight bodies for public-sector organisations.\n      Centralized / decentralized :: One central decision-making body, or decisions spread across business units.\n    Roles for systems and data :: Who is responsible for data. !! Owner = accountable (senior). Custodian = hands-on protection (IT). Controller decides why and how personal data is processed; Processor does the processing for the controller.\n      Owner :: Senior person accountable for the data; decides classification and who gets access.\n      Controller :: Decides why and how personal data is processed (a GDPR term).\n      Processor :: Processes personal data on behalf of the controller, for example a payroll provider.\n      Custodian / steward :: Handles day-to-day care: storage, backups and applying the owner's controls. Usually IT.\n  5.2 Risk management :: Explain the elements of the risk management process.\n    Risk identification :: Finding the threats, vulnerabilities and resulting risks to assets.\n    Risk assessment types :: How often risk is assessed.\n      Ad hoc :: As needed, triggered by an event or change.\n      Recurring :: At regular intervals, such as yearly or quarterly.\n      One-time :: For a specific project or event.\n      Continuous :: Ongoing, fed by real-time data.\n    Risk analysis :: Measuring the risk.\n      Qualitative :: Uses judgement and ratings (low, medium, high; heat maps). Fast but subjective.\n      Quantitative :: Uses numbers and money to calculate expected loss. Objective but needs data.\n      Single loss expectancy (SLE) :: Money lost in one occurrence. SLE = Asset value \u00d7 Exposure factor.\n      Annualized rate of occurrence (ARO) :: How many times per year it's expected to happen (once every 4 years = 0.25).\n      Annualized loss expectancy (ALE) :: Expected loss per year. ALE = SLE \u00d7 ARO. !! Worked example: a $200,000 server with EF 25% gives SLE $50,000. With ARO 0.5, ALE = $25,000 a year, so a control costing more than that per year isn't worth it.\n      Exposure factor (EF) :: Percentage of the asset's value lost in one occurrence.\n      Probability :: Statistical chance of the event happening.\n      Likelihood :: Usually a qualitative rating of how likely it is (rare, likely, almost certain).\n      Impact :: The effect on the organisation if the risk happens.\n    Risk register :: Central record of all identified risks.\n      Key risk indicators (KRIs) :: Metrics that warn when a risk is increasing.\n      Risk owners :: The person responsible for managing each risk.\n      Risk threshold :: The level at which a risk demands action.\n    Risk tolerance :: The acceptable variation around the risk appetite for a particular risk.\n    Risk appetite :: How much risk the organisation is willing to pursue overall.\n      Expansionary :: Willing to take more risk for growth.\n      Conservative :: Prefers less risk, even at the cost of growth.\n      Neutral :: Neither risk-seeking nor risk-averse.\n    Risk management strategies :: The four ways to handle a risk. !! Insurance = transfer. Stop doing the risky activity = avoid. Add a control = mitigate. Do nothing on purpose (documented) = accept.\n      Transfer :: Shift the financial impact to someone else: insurance, outsourcing, contracts.\n      Accept :: Acknowledge the risk and take no further action, because the cost of fixing outweighs the risk.\n      Exemption :: A formal acceptance of a risk that exceeds the threshold, approved for a specific reason.\n      Exception :: A specific case where a standard control isn't applied because of special conditions.\n      Avoid :: Stop or never start the activity that creates the risk.\n      Mitigate :: Add controls to reduce likelihood or impact.\n    Risk reporting :: Keeping stakeholders informed with dashboards, charts and reports.\n    Business impact analysis (BIA) :: Identifies critical processes and the impact of losing them; sets recovery targets. !! RPO = how much data you can lose (looks back to the last backup). RTO = how long you can be down (looks forward to restoration).\n      RTO :: Recovery Time Objective: the maximum time a process can be down before it must be restored.\n      RPO :: Recovery Point Objective: the maximum acceptable data loss, measured in time since the last good backup.\n      MTTR :: Mean Time To Repair: average time to fix a failed component. Lower is better.\n      MTBF :: Mean Time Between Failures: average operating time between failures of a repairable system. Higher is better.\n  5.3 Third-party risk :: Explain the processes for third-party risk assessment and management. You can outsource the work, but not the responsibility.\n    Vendor assessment :: Checking a vendor's security.\n      Penetration testing :: Testing the vendor's security through authorized simulated attacks.\n      Right-to-audit clause :: Contract clause that lets you audit the vendor's security and compliance.\n      Evidence of internal audits :: Asking for the vendor's own audit results.\n      Independent assessments :: Third-party certifications and reports, such as SOC 2 or ISO 27001.\n      Supply chain analysis :: Assessing the vendor's own suppliers and fourth parties.\n    Vendor selection :: Choosing a vendor.\n      Due diligence :: Researching financial stability, reputation, history and security before signing.\n      Conflict of interest :: Making sure no conflicting relationships compromise the vendor's objectivity.\n    Agreement types :: The contracts. !! SLA = service levels (uptime). MOU = informal intent. MSA = umbrella terms for future work. SOW = specific deliverables. NDA = confidentiality. BPA = partnership terms.\n      SLA :: Service-level agreement: measurable service levels (uptime, response time) and penalties if missed.\n      MOA :: Memorandum of agreement: documents mutual goals and responsibilities; more formal than an MOU.\n      MOU :: Memorandum of understanding: shared intent between parties; usually not legally binding.\n      MSA :: Master service agreement: general terms that govern all future work orders between the parties.\n      WO / SOW :: Work order or statement of work: the specific deliverables, timeline and cost for one engagement.\n      NDA :: Non-disclosure agreement: legally binds the parties to keep information confidential.\n      BPA :: Business partners agreement: terms of a partnership, including profit sharing and responsibilities.\n    Vendor monitoring :: Ongoing review of the vendor's performance, security and compliance.\n    Questionnaires :: Security questionnaires collecting information about the vendor's controls.\n    Rules of engagement :: Agreed rules for how the parties interact, especially during tests and audits (scope, timing, contacts).\n  5.4 Security compliance :: Summarize the elements of effective security compliance.\n    Compliance reporting :: Who you report to.\n      Internal :: Reporting compliance status to management, the board and internal bodies.\n      External :: Reporting to regulators or external auditors, often required by law.\n    Consequences of non-compliance :: What happens if you fail.\n      Fines :: Monetary penalties from regulators.\n      Sanctions :: Punitive restrictions that can limit operations.\n      Reputational damage :: Loss of customer and partner trust.\n      Loss of license :: Being barred from operating in an industry or region.\n      Contractual impacts :: Breach of contract with customers or partners.\n    Compliance monitoring :: Staying compliant.\n      Due diligence / due care :: Due diligence is investigating and understanding the risks; due care is acting reasonably to address them.\n      Attestation and acknowledgement :: Formal declarations, often by senior management, that requirements are met; users acknowledge policies.\n      Internal and external :: Internal self-checks plus external audits.\n      Automation :: Tools that continuously check and enforce compliance.\n    Privacy :: Protecting personal data.\n      Legal implications :: Privacy laws vary: local/regional (CCPA in California), national, and global (GDPR for EU residents' data).\n      Data subject :: The individual whom the personal data is about.\n      Controller vs processor :: The controller decides why and how data is processed; the processor processes it on the controller's behalf.\n      Ownership :: Who owns the data; under many laws the data subject keeps rights over it.\n      Data inventory and retention :: Know what personal data you hold, where, and how long you keep it.\n      Right to be forgotten :: A person's right (GDPR) to have their personal data erased.\n  5.5 Audits and assessments :: Explain the types and purposes of audits and assessments.\n    Attestation :: A formal written statement by management or an independent party that requirements or controls are met.\n    Internal :: Assessments done within the organisation.\n      Compliance :: Internal checks that departments follow policies and regulations.\n      Audit committee :: Board-level group that oversees internal audit, financial reporting and compliance.\n      Self-assessments :: Teams evaluate their own processes and risks; less formal, used for improvement.\n    External :: Assessments done by outsiders.\n      Regulatory :: Audits by government or regulatory bodies checking legal compliance.\n      Examinations :: In-depth reviews tied to specific regulations or standards.\n      Assessment :: General evaluation by an outside party of processes or systems.\n      Independent third-party audit :: An unaffiliated firm audits the organisation for impartial, objective results.\n    Penetration testing :: Authorized attacks to find and prove vulnerabilities.\n      Physical :: Testing locks, badges, guards and tailgating.\n      Offensive :: Red team: actively attacks to find and exploit weaknesses.\n      Defensive :: Blue team: tests how well defences detect and respond to simulated attacks.\n      Integrated :: Combines offensive and defensive, physical and digital (purple team approach).\n      Known environment :: Testers get full information about the target. Formerly white box.\n      Partially known environment :: Testers get some information. Formerly grey box.\n      Unknown environment :: Testers get no prior information, like a real outside attacker. Formerly black box.\n      Passive reconnaissance :: Gathering information without touching the target (OSINT, public records, social media).\n      Active reconnaissance :: Directly interacting with the target, such as port scanning and banner grabbing. Can be detected.\n  5.6 Security awareness :: Given a scenario, implement security awareness practices.\n    Phishing :: The top human threat.\n      Campaigns :: Controlled simulated phishing emails test whether staff click, with varied realistic templates.\n      Recognizing a phishing attempt :: Teach the signs: odd sender addresses, misspellings, urgency, unexpected attachments, mismatched links.\n      Responding to reported messages :: Make reporting easy (a report button) and have the security team analyze and respond.\n    Anomalous behavior recognition :: Spotting things that are off.\n      Risky :: High-risk behaviour such as sharing passwords or using public Wi-Fi for sensitive work.\n      Unexpected :: Unusual system behaviour such as sudden shutdowns or unknown software installs.\n      Unintentional :: Honest mistakes such as emailing sensitive data to the wrong person.\n    User guidance and training :: Topics to cover.\n      Policy / handbooks :: Distribute and refresh security policies, for example in an annual briefing.\n      Situational awareness :: Staying alert to surroundings and current threats (shoulder surfing, tailgating).\n      Insider threat :: Threats can come from inside; know the warning signs and how to report.\n      Password management :: Strong unique passwords and password managers.\n      Removable media and cables :: Never plug in unknown USB drives or cables; they can carry malware.\n      Social engineering :: Recognize and resist manipulation: pretexting, impersonation, urgency.\n      Operational security :: Daily habits: lock screens, clean desk, don't overshare online.\n      Hybrid / remote work :: Use the VPN, secure home Wi-Fi, keep work devices for work.\n    Reporting and monitoring :: Measuring awareness.\n      Initial :: Establish a baseline of awareness with initial tests.\n      Recurring :: Re-test regularly and adjust training to the results.\n    Development :: Build an awareness program that adapts to new threats and uses employee feedback.\n    Execution :: Roll it out to everyone, from executives to new hires, with a mix of online modules, workshops and hands-on exercises.\n";window.__GLOSSARY__="AAA|Authentication, Authorization and Accounting|Framework for verifying identity, granting rights and logging activity.\nACL|Access Control List|Ordered allow/deny rules for a resource or interface.\nAES|Advanced Encryption Standard|The standard symmetric block cipher (128/192/256-bit keys).\nAES-256|AES with a 256-bit key|Strongest standard AES variant.\nAH|Authentication Header|IPsec protocol giving integrity and authentication, no encryption.\nAI|Artificial Intelligence|Machines performing tasks that need human-like reasoning.\nAIS|Automated Indicator Sharing|US CISA service for exchanging threat indicators in real time.\nALE|Annualized Loss Expectancy|Expected yearly loss: SLE \u00d7 ARO.\nAP|Access Point|Device that connects wireless clients to a wired network.\nAPI|Application Programming Interface|Defined way for programs to talk to each other.\nAPT|Advanced Persistent Threat|Skilled, well-funded attacker that stays hidden long-term.\nARO|Annualized Rate of Occurrence|How many times per year an event is expected.\nARP|Address Resolution Protocol|Maps IP addresses to MAC addresses; target of ARP poisoning.\nASLR|Address Space Layout Randomization|Randomizes memory locations to hinder exploits.\nATT&CK|Adversarial Tactics, Techniques and Common Knowledge|MITRE's knowledge base of attacker behaviour.\nAUP|Acceptable Use Policy|Rules for proper use of company systems.\nAV|Antivirus|Software that detects and removes malware.\nBASH|Bourne Again Shell|Common Unix/Linux command shell.\nBCP|Business Continuity Planning|Keeping critical business functions running in a disruption.\nBGP|Border Gateway Protocol|Routing protocol between networks on the internet.\nBIA|Business Impact Analysis|Identifies critical processes and the impact of losing them.\nBIOS|Basic Input/Output System|Legacy firmware that starts hardware at boot.\nBPA|Business Partners Agreement|Contract defining a partnership's terms.\nBPDU|Bridge Protocol Data Unit|Spanning Tree messages between switches; BPDU guard protects ports.\nBYOD|Bring Your Own Device|Employees use personal devices for work.\nCA|Certificate Authority|Trusted entity that issues digital certificates.\nCAPTCHA|Completely Automated Public Turing test to tell Computers and Humans Apart|Challenge that tells humans from bots.\nCAR|Corrective Action Report|Document describing fixes for a found problem.\nCASB|Cloud Access Security Broker|Enforces security policy between users and cloud services.\nCBC|Cipher Block Chaining|Block cipher mode where each block depends on the previous one.\nCCMP|Counter Mode/CBC-MAC Protocol|AES-based encryption used by WPA2.\nCCTV|Closed-Circuit Television|Video surveillance cameras.\nCERT|Computer Emergency Response Team|Group that handles security incidents.\nCFB|Cipher Feedback|Block cipher mode that works like a stream cipher.\nCHAP|Challenge-Handshake Authentication Protocol|Authenticates with a challenge/response, never sending the password.\nCIA|Confidentiality, Integrity, Availability|The three core security goals.\nCIO|Chief Information Officer|Executive in charge of IT.\nCIRT|Computer Incident Response Team|Team that responds to security incidents.\nCMS|Content Management System|Software for managing website content (WordPress).\nCOOP|Continuity of Operations Planning|Keeping essential functions running during disruption.\nCOPE|Corporate-Owned, Personally Enabled|Company device the user may also use personally.\nCP|Contingency Planning|Planning for unexpected events and recovery.\nCRC|Cyclic Redundancy Check|Error-detecting checksum; not secure against tampering.\nCRL|Certificate Revocation List|CA's published list of revoked certificates.\nCSO|Chief Security Officer|Executive in charge of security.\nCSP|Cloud Service Provider|Company providing cloud services (AWS, Azure).\nCSR|Certificate Signing Request|Request sent to a CA containing a public key and identity.\nCSRF|Cross-Site Request Forgery|Tricks a logged-in user's browser into sending unwanted requests.\nCSU|Channel Service Unit|Device connecting a digital line to a WAN.\nCTM|Counter Mode|Block cipher mode using an incrementing counter (CTR).\nCTO|Chief Technology Officer|Executive in charge of technology strategy.\nCVE|Common Vulnerabilities and Exposures|Public list of unique IDs for known vulnerabilities.\nCVSS|Common Vulnerability Scoring System|0\u201310 severity score for vulnerabilities.\nCYOD|Choose Your Own Device|User picks from an approved list of company devices.\nDAC|Discretionary Access Control|Resource owner decides who gets access.\nDBA|Database Administrator|Person who manages databases.\nDDoS|Distributed Denial of Service|Flooding a target from many sources.\nDEP|Data Execution Prevention|Blocks code from running in data-only memory areas.\nDES|Data Encryption Standard|Old 56-bit symmetric cipher; insecure.\nDHCP|Dynamic Host Configuration Protocol|Automatically assigns IP settings.\nDHE|Diffie-Hellman Ephemeral|Key exchange with temporary keys, giving forward secrecy.\nDKIM|DomainKeys Identified Mail|Email signature proving a message wasn't altered.\nDLL|Dynamic Link Library|Shared Windows code library; target of DLL injection.\nDLP|Data Loss Prevention|Detects and blocks sensitive data leaving.\nDMARC|Domain-based Message Authentication, Reporting and Conformance|Tells receivers how to handle SPF/DKIM failures.\nDNAT|Destination Network Address Translation|Rewrites destination addresses, e.g. port forwarding.\nDNS|Domain Name System|Translates names to IP addresses.\nDoS|Denial of Service|Making a service unavailable.\nDPO|Data Protection Officer|Oversees data privacy compliance (GDPR role).\nDRP|Disaster Recovery Plan|How IT systems are restored after a disaster.\nDSA|Digital Signature Algorithm|Standard algorithm for digital signatures.\nDSL|Digital Subscriber Line|Internet over telephone lines.\nEAP|Extensible Authentication Protocol|Authentication framework used by 802.1X.\nECB|Electronic Codebook|Weakest block mode; identical blocks give identical ciphertext.\nECC|Elliptic Curve Cryptography|Asymmetric crypto with strong security from short keys.\nECDHE|Elliptic Curve Diffie-Hellman Ephemeral|Fast key exchange with forward secrecy.\nECDSA|Elliptic Curve Digital Signature Algorithm|Signatures using elliptic curves.\nEDR|Endpoint Detection and Response|Monitors and responds to threats on endpoints.\nEFS|Encrypting File System|Windows file-level encryption.\nERP|Enterprise Resource Planning|Integrated business management software.\nESN|Electronic Serial Number|Unique ID for mobile devices.\nESP|Encapsulating Security Payload|IPsec protocol that encrypts and authenticates.\nFACL|File System Access Control List|Permissions on files and folders.\nFDE|Full Disk Encryption|Encrypts an entire drive.\nFIM|File Integrity Monitoring|Alerts when critical files change.\nFPGA|Field Programmable Gate Array|Reprogrammable chip.\nFRR|False Rejection Rate|How often biometrics wrongly reject a valid user.\nFAR|False Acceptance Rate|How often biometrics wrongly accept an impostor.\nFTP|File Transfer Protocol|Unencrypted file transfer (ports 20/21).\nFTPS|FTP Secure|FTP over TLS (ports 989/990).\nGCM|Galois/Counter Mode|Block mode giving encryption plus authentication.\nGDPR|General Data Protection Regulation|EU privacy law covering EU residents' data.\nGPG|GNU Privacy Guard|Open-source implementation of PGP.\nGPO|Group Policy Object|Set of Windows settings applied via Active Directory.\nGPS|Global Positioning System|Satellite location service.\nGPU|Graphics Processing Unit|Processor often used for password cracking.\nGRE|Generic Routing Encapsulation|Tunneling protocol without encryption.\nHA|High Availability|Designed to minimize downtime.\nHDD|Hard Disk Drive|Magnetic storage drive.\nHIDS|Host-based Intrusion Detection System|Detects attacks on one host.\nHIPS|Host-based Intrusion Prevention System|Detects and blocks attacks on one host.\nHMAC|Hash-based Message Authentication Code|Keyed hash proving integrity and authenticity.\nHOTP|HMAC-based One-Time Password|One-time code based on a counter.\nHSM|Hardware Security Module|Tamper-resistant device that stores and manages keys.\nHTML|Hypertext Markup Language|Language for web pages.\nHTTP|Hypertext Transfer Protocol|Unencrypted web protocol (port 80).\nHTTPS|HTTP Secure|Web over TLS (port 443).\nHVAC|Heating, Ventilation and Air Conditioning|Environmental controls; can be an attack target.\nIaaS|Infrastructure as a Service|Rent compute, storage and networking; you manage the OS up.\nIaC|Infrastructure as Code|Infrastructure defined and deployed from code.\nIAM|Identity and Access Management|Managing identities and their access.\nICMP|Internet Control Message Protocol|Network diagnostics (ping).\nICS|Industrial Control Systems|Systems that control physical industrial processes.\nIDEA|International Data Encryption Algorithm|Older symmetric block cipher.\nIDF|Intermediate Distribution Frame|Wiring closet that connects to the MDF.\nIdP|Identity Provider|Service that authenticates users for others (SSO).\nIDS|Intrusion Detection System|Detects and alerts on attacks.\nIEEE|Institute of Electrical and Electronics Engineers|Standards body (802.11, 802.1X).\nIKE|Internet Key Exchange|Sets up IPsec security associations.\nIM|Instant Messaging|Real-time chat.\nIMAP|Internet Message Access Protocol|Email retrieval (143; IMAPS 993).\nIoC|Indicator of Compromise|Evidence that a breach occurred.\nIoT|Internet of Things|Network-connected everyday devices.\nIP|Internet Protocol|Addressing and routing of packets.\nIPS|Intrusion Prevention System|Detects and blocks attacks inline.\nIPsec|Internet Protocol Security|Suite that secures IP traffic (AH, ESP, IKE).\nIR|Incident Response|Handling security incidents.\nIRC|Internet Relay Chat|Old chat protocol, historically used for botnet C2.\nIRP|Incident Response Plan|Documented plan for handling incidents.\nISO|International Organization for Standardization|Standards body (ISO 27001).\nISP|Internet Service Provider|Company providing internet access.\nISSO|Information Systems Security Officer|Responsible for a system's security.\nIV|Initialization Vector|Random value that makes encryption output unique.\nKDC|Key Distribution Center|Kerberos server that issues tickets.\nKEK|Key Encryption Key|Key used to encrypt other keys.\nL2TP|Layer 2 Tunneling Protocol|VPN tunneling, usually paired with IPsec.\nLAN|Local Area Network|Network in one location.\nLDAP|Lightweight Directory Access Protocol|Queries directory services (389; LDAPS 636).\nLEAP|Lightweight Extensible Authentication Protocol|Old Cisco EAP method; insecure.\nMaaS|Monitoring as a Service|Outsourced monitoring.\nMAC|Mandatory Access Control|Access based on labels and clearances set by the system.\nMAC|Media Access Control|Hardware address of a network interface.\nMAC|Message Authentication Code|Short value proving message integrity and authenticity.\nMAN|Metropolitan Area Network|Network spanning a city.\nMBR|Master Boot Record|First sector of a disk with boot code; rootkit target.\nMD5|Message Digest 5|128-bit hash; broken by collisions.\nMDF|Main Distribution Frame|Primary wiring and demarcation point.\nMDM|Mobile Device Management|Manages and secures mobile devices.\nMFA|Multifactor Authentication|Two or more different authentication factor types.\nMFD|Multifunction Device|Printer/scanner/copier combo.\nMFP|Multifunction Printer|Printer/scanner/copier combo.\nML|Machine Learning|Systems that learn patterns from data.\nMMS|Multimedia Message Service|Picture and video messaging.\nMOA|Memorandum of Agreement|Formal document of mutual responsibilities.\nMOU|Memorandum of Understanding|Informal statement of shared intent.\nMPLS|Multiprotocol Label Switching|Carrier WAN technology using labels.\nMSA|Master Service Agreement|Umbrella contract for future work.\nMS-CHAP|Microsoft Challenge-Handshake Authentication Protocol|Microsoft's CHAP; v2 is weak.\nMSP|Managed Service Provider|Outsourced IT management.\nMSSP|Managed Security Service Provider|Outsourced security monitoring and management.\nMTBF|Mean Time Between Failures|Average uptime between failures.\nMTTF|Mean Time To Failure|Average life of a non-repairable component.\nMTTR|Mean Time To Repair/Recover|Average time to fix and restore.\nMTU|Maximum Transmission Unit|Largest packet size on a link.\nNAC|Network Access Control|Lets only authenticated, compliant devices join.\nNAT|Network Address Translation|Maps private IPs to public ones.\nNDA|Non-Disclosure Agreement|Legal confidentiality contract.\nNFC|Near-Field Communication|Very short-range wireless (tap to pay).\nNGFW|Next-Generation Firewall|Application-aware firewall with deep packet inspection.\nNIDS|Network-based Intrusion Detection System|Watches network traffic for attacks.\nNIPS|Network-based Intrusion Prevention System|Blocks attacks in network traffic.\nNIST|National Institute of Standards and Technology|US standards body (Cybersecurity Framework, SP 800 series).\nNTFS|New Technology File System|Windows file system with permissions.\nNTLM|NT LAN Manager|Legacy Windows authentication; pass-the-hash target.\nNTP|Network Time Protocol|Synchronizes clocks; vital for log correlation.\nOAuth|Open Authorization|Framework for delegated authorization with tokens.\nOCSP|Online Certificate Status Protocol|Real-time certificate revocation check.\nOID|Object Identifier|Unique ID for objects in certificates.\nOS|Operating System|Core system software.\nOSINT|Open-Source Intelligence|Information from public sources.\nOSPF|Open Shortest Path First|Internal routing protocol.\nOT|Operational Technology|Hardware/software controlling physical processes.\nOTA|Over-the-Air|Wireless updates to devices.\nOVAL|Open Vulnerability Assessment Language|SCAP language describing system states to check.\nP12|PKCS #12|File format bundling a certificate with its private key (.pfx).\nP2P|Peer-to-Peer|Direct device-to-device networking.\nPaaS|Platform as a Service|Rent a platform to run your apps; you manage apps and data.\nPAC|Proxy Auto-Configuration|File telling browsers which proxy to use.\nPAM|Privileged Access Management|Controls and audits admin accounts.\nPAM|Pluggable Authentication Modules|Linux authentication framework.\nPAP|Password Authentication Protocol|Sends passwords in cleartext; insecure.\nPAT|Port Address Translation|Many private IPs share one public IP via ports.\nPBKDF2|Password-Based Key Derivation Function 2|Key stretching function.\nPBX|Private Branch Exchange|Private telephone switch.\nPCAP|Packet Capture|Recorded raw network traffic.\nPCI DSS|Payment Card Industry Data Security Standard|Security standard for card data.\nPDU|Power Distribution Unit|Rack device distributing power.\nPEAP|Protected Extensible Authentication Protocol|EAP inside a TLS tunnel (server cert only).\nPED|Personal Electronic Device|Phone, tablet and similar.\nPEM|Privacy-Enhanced Mail|Common Base64 certificate file format.\nPFS|Perfect Forward Secrecy|Past sessions stay safe even if a long-term key leaks.\nPGP|Pretty Good Privacy|Email and file encryption and signing.\nPHI|Protected Health Information|Health data covered by HIPAA.\nPII|Personally Identifiable Information|Data identifying a person.\nPIV|Personal Identity Verification|US government smart card standard.\nPKCS|Public Key Cryptography Standards|Family of crypto format standards.\nPKI|Public Key Infrastructure|System of CAs, certificates and keys.\nPOP|Post Office Protocol|Email retrieval (110; POP3S 995).\nPOTS|Plain Old Telephone Service|Analog phone line.\nPPP|Point-to-Point Protocol|Direct link protocol.\nPPTP|Point-to-Point Tunneling Protocol|Old VPN protocol; insecure.\nPSK|Pre-Shared Key|Shared Wi-Fi password (WPA2-Personal).\nPTZ|Pan-Tilt-Zoom|Camera that can move and zoom.\nPUP|Potentially Unwanted Program|Unwanted but not clearly malicious software.\nRA|Recovery Agent|Can recover encrypted data with special keys.\nRA|Registration Authority|Verifies identities for a CA.\nRACE|Research and Development in Advanced Communications Technologies in Europe|EU programme behind RIPEMD.\nRAD|Rapid Application Development|Fast iterative development method.\nRADIUS|Remote Authentication Dial-In User Service|AAA server used with 802.1X and VPNs.\nRAID|Redundant Array of Inexpensive Disks|Combining disks for redundancy or speed.\nRAS|Remote Access Server|Server that accepts remote connections.\nRAT|Remote Access Trojan|Malware giving remote control.\nRBAC|Role-Based Access Control|Access by job role.\nRBAC|Rule-Based Access Control|Access by system-wide rules.\nRC4|Rivest Cipher 4|Old stream cipher; insecure.\nRDP|Remote Desktop Protocol|Windows remote desktop (3389).\nRFID|Radio-Frequency Identification|Wireless tags and badges; can be cloned.\nRIPEMD|RACE Integrity Primitives Evaluation Message Digest|Hash function family.\nROI|Return on Investment|Benefit relative to cost.\nRPO|Recovery Point Objective|Maximum acceptable data loss, measured in time.\nRSA|Rivest, Shamir and Adleman|Widely used asymmetric algorithm.\nRTBH|Remotely Triggered Black Hole|Drops attack traffic upstream during DDoS.\nRTO|Recovery Time Objective|Maximum acceptable downtime.\nRTOS|Real-Time Operating System|OS for time-critical tasks.\nRTP|Real-time Transport Protocol|Carries voice and video; SRTP secures it.\nS/MIME|Secure/Multipurpose Internet Mail Extensions|Email encryption and signing with certificates.\nSaaS|Software as a Service|Rent finished software; you manage data and access.\nSAE|Simultaneous Authentication of Equals|WPA3 handshake that resists offline cracking.\nSAML|Security Assertion Markup Language|XML standard for SSO assertions.\nSAN|Storage Area Network|Dedicated high-speed storage network.\nSAN|Subject Alternative Name|Certificate field listing extra names it covers.\nSASE|Secure Access Service Edge|Cloud-delivered networking plus security.\nSCADA|Supervisory Control and Data Acquisition|Industrial monitoring and control systems.\nSCAP|Security Content Automation Protocol|Standards for automated vulnerability and config checking.\nSCEP|Simple Certificate Enrollment Protocol|Automates certificate issuance to devices.\nSDK|Software Development Kit|Tools for building software.\nSDLC|Software Development Lifecycle|Phases of building software.\nSDLM|Software Development Lifecycle Methodology|Approach to the SDLC (Agile, Waterfall).\nSDN|Software-Defined Networking|Network control managed in software.\nSD-WAN|Software-Defined Wide Area Network|Smart routing over several WAN links.\nSED|Self-Encrypting Drive|Drive with built-in hardware encryption.\nSEH|Structured Exception Handler|Windows error handling; exploit target.\nSFTP|SSH File Transfer Protocol|Secure file transfer over SSH (22).\nSHA|Secure Hash Algorithm|Hash family; SHA-2/SHA-3 are current.\nSIEM|Security Information and Event Management|Collects and correlates logs; alerts on threats.\nSIM|Subscriber Identity Module|Phone card identifying the subscriber; SIM swapping attacks.\nSLA|Service-Level Agreement|Contracted service levels.\nSLE|Single Loss Expectancy|Loss from one event: asset value \u00d7 EF.\nSMS|Short Message Service|Text messaging.\nSMTP|Simple Mail Transfer Protocol|Sends email (25).\nSMTPS|SMTP Secure|SMTP over TLS (465/587).\nSNMP|Simple Network Management Protocol|Network device management (161/162); use v3.\nSOAP|Simple Object Access Protocol|XML-based web service protocol.\nSOAR|Security Orchestration, Automation and Response|Automates and coordinates security responses.\nSoC|System on Chip|Whole computer on one chip.\nSOC|Security Operations Center|Team that monitors and responds 24/7.\nSOW|Statement of Work|Specific deliverables for an engagement.\nSPF|Sender Policy Framework|DNS list of servers allowed to send a domain's email.\nSPIM|Spam over Instant Messaging|Spam sent via IM.\nSQL|Structured Query Language|Language for databases.\nSQLi|SQL Injection|Injecting SQL into input fields.\nSRTP|Secure Real-time Transport Protocol|Encrypted voice and video.\nSSD|Solid-State Drive|Flash storage; harder to wipe reliably.\nSSH|Secure Shell|Encrypted remote access (22).\nSSL|Secure Sockets Layer|Predecessor of TLS; deprecated.\nSSO|Single Sign-On|One login for many services.\nSTIX|Structured Threat Information eXpression|Standard format for threat intelligence.\nSWG|Secure Web Gateway|Filters web traffic for threats and policy.\nTACACS+|Terminal Access Controller Access-Control System Plus|Cisco AAA protocol; encrypts the whole payload.\nTAXII|Trusted Automated eXchange of Indicator Information|Protocol for sharing STIX threat data.\nTCP/IP|Transmission Control Protocol/Internet Protocol|Core internet protocol suite.\nTGT|Ticket-Granting Ticket|Kerberos ticket used to request service tickets.\nTKIP|Temporal Key Integrity Protocol|WPA1 encryption; deprecated.\nTLS|Transport Layer Security|Encrypts data in transit (HTTPS).\nTOC|Time-of-Check|When a condition is checked (race condition).\nTOTP|Time-based One-Time Password|Code that changes every 30 seconds.\nTOU|Time-of-Use|When the checked resource is used (race condition).\nTPM|Trusted Platform Module|Motherboard chip storing keys and boot measurements.\nTSIG|Transaction Signature|Authenticates DNS updates and zone transfers.\nTTP|Tactics, Techniques and Procedures|How attackers operate.\nUAT|User Acceptance Testing|Final testing by users before release.\nUAV|Unmanned Aerial Vehicle|Drone.\nUDP|User Datagram Protocol|Connectionless transport protocol.\nUEFI|Unified Extensible Firmware Interface|Modern BIOS replacement; supports Secure Boot.\nUEM|Unified Endpoint Management|Manages all endpoint types from one console.\nUPS|Uninterruptible Power Supply|Battery backup for short outages.\nURI|Uniform Resource Identifier|Identifies a resource.\nURL|Uniform Resource Locator|Web address.\nUSB|Universal Serial Bus|Peripheral connector; removable media risk.\nUTM|Unified Threat Management|All-in-one security appliance.\nUTP|Unshielded Twisted Pair|Common network cable.\nVBA|Visual Basic for Applications|Office macro language; malware vector.\nVDE|Virtual Desktop Environment|Hosted desktop environment.\nVDI|Virtual Desktop Infrastructure|Desktops run on central servers.\nVLAN|Virtual Local Area Network|Logical network segment on shared switches.\nVLSM|Variable Length Subnet Masking|Subnets of different sizes.\nVM|Virtual Machine|Software-emulated computer.\nVoIP|Voice over IP|Phone calls over IP networks.\nVPC|Virtual Private Cloud|Isolated network in a public cloud.\nVPN|Virtual Private Network|Encrypted tunnel over an untrusted network.\nVTC|Video Teleconferencing|Video meetings.\nWAF|Web Application Firewall|Protects web apps from SQLi, XSS and similar.\nWAP|Wireless Access Point|Connects wireless devices to a network.\nWEP|Wired Equivalent Privacy|Original Wi-Fi security; broken.\nWIDS|Wireless Intrusion Detection System|Detects rogue APs and wireless attacks.\nWIPS|Wireless Intrusion Prevention System|Detects and blocks wireless attacks.\nWO|Work Order|Specific task request under a contract.\nWPA|Wi-Fi Protected Access|Wi-Fi security; WPA3 is current.\nWPS|Wi-Fi Protected Setup|PIN/button pairing; PIN is easily brute-forced.\nWTLS|Wireless TLS|TLS variant for old mobile protocols.\nXDR|Extended Detection and Response|Correlates detection across endpoints, network, cloud and email.\nXML|Extensible Markup Language|Structured data format; XXE injection target.\nXOR|Exclusive OR|Bitwise operation used in ciphers.\nXSRF|Cross-Site Request Forgery|Same as CSRF.\nXSS|Cross-Site Scripting|Injected scripts run in victims' browsers.\nZTNA|Zero Trust Network Access|Per-app access verified each time, replacing VPN-style trust.\n";</script>
+<script>(() => {
+"use strict";
+const OUT = window.__OUTLINE__, GLO = window.__GLOSSARY__;
+const WEIGHTS = [12, 22, 18, 28, 20];
+const SVGNS = "http://www.w3.org/2000/svg";
+const RM = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const $ = (s, el = document) => el.querySelector(s);
+
+const I = {
+  check: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg>',
+  chev: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3.5L10.5 8 6 12.5"/></svg>',
+  close: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4l8 8M12 4l-8 8"/></svg>',
+  open: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h10M3 8h10M3 11h10"/></svg>',
+  cards: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="2" y="4" width="9" height="10" rx="1.5"/><path d="M5 4V3.5A1.5 1.5 0 016.5 2h6A1.5 1.5 0 0114 3.5v7a1.5 1.5 0 01-1.5 1.5H11"/></svg>',
+};
+
+/* ---------------- parse outline ---------------- */
+const root = { id: "r", t: "Security+ SY0-701", d: "The whole CompTIA Security+ SY0-701 syllabus as a map: 5 domains, 28 objectives. Open a domain, then an objective, then keep going until you reach the cards that explain each topic. Tick a card when you know it; your progress is saved in this browser.", tip: "Exam weighting: Operations (28%) and Threats (22%) together are half the exam. Start there if time is short.", code: "", depth: 0, children: [], parent: null, dom: -1 };
+const all = [root], byId = new Map([["r", root]]);
+(() => {
+  const st = [root];
+  OUT.split("\n").forEach(line => {
+    if (!line.trim()) return;
+    const depth = line.match(/^ */)[0].length / 2 + 1;
+    let s = line.trim(), tip = "", d = "", code = "";
+    let k = s.indexOf(" !! "); if (k >= 0) { tip = s.slice(k + 4).trim(); s = s.slice(0, k); }
+    k = s.indexOf(" :: "); if (k >= 0) { d = s.slice(k + 4).trim(); s = s.slice(0, k); }
+    s = s.trim();
+    if (depth <= 2) { const m = s.match(/^(\d(?:\.\d)?)\s+(.*)$/); if (m) { code = m[1]; s = m[2]; } }
+    const parent = st[depth - 1];
+    const n = { t: s, d, tip, code, depth, parent, children: [] };
+    n.id = parent.id + "." + parent.children.length;
+    n.dom = depth === 1 ? parent.children.length : parent.dom;
+    parent.children.push(n); st[depth] = n; st.length = depth + 1;
+    all.push(n); byId.set(n.id, n);
+  });
+})();
+const isLeaf = n => n.children.length === 0;
+const leaves = all.filter(n => n !== root && isLeaf(n));
+(function lc(n) { n.leafs = isLeaf(n) ? [n] : n.children.flatMap(lc); return n.leafs; })(root);
+const domains = root.children;
+const GL = GLO.split("\n").filter(Boolean).map(l => { const [a, e, d] = l.split("|"); return { a, e, d }; });
+
+/* ---------------- state ---------------- */
+const KEY = "secplus701-map-v1";
+const S = { exp: ["r"], known: [], recall: false, focus: true, theme: "auto", seen: false };
+try { const v = JSON.parse(localStorage.getItem(KEY) || "null"); if (v) Object.assign(S, v); } catch (e) {}
+const expanded = new Set((S.exp || []).filter(id => byId.has(id))); expanded.add("r");
+const known = new Set((S.known || []).filter(id => byId.has(id)));
+const revealed = new Set();
+function save() {
+  try { localStorage.setItem(KEY, JSON.stringify({ exp: [...expanded], known: [...known], recall: S.recall, focus: S.focus, theme: S.theme, seen: S.seen })); } catch (e) {}
+}
+
+/* ---------------- helpers ---------------- */
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const fmt = s => esc(s).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
+const color = n => n.dom < 0 ? "var(--root)" : `var(--c${n.dom + 1})`;
+const kc = n => n.leafs.reduce((a, l) => a + (known.has(l.id) ? 1 : 0), 0);
+const pct = n => Math.round(100 * kc(n) / n.leafs.length);
+const ancestors = n => { const a = []; let p = n.parent; while (p) { a.unshift(p); p = p.parent; } return a; };
+const isMobile = () => innerWidth <= 860;
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+const label = n => n.code ? n.code + " " + n.t : n.t;
+
+/* ---------------- DOM refs ---------------- */
+const stage = $("#stage"), world = $("#world"), nodesEl = $("#nodes"), edgesEl = $("#edges"), panel = $("#panel");
+const vis = new Map();
+let sel = null;
+
+function cls(n) {
+  if (n.depth === 0) return "root";
+  if (n.depth === 1) return "dom";
+  if (isLeaf(n)) return "leaf";
+  return "br" + (n.depth === 2 ? " obj" : "");
+}
+function fill(el, n) {
+  const k = kc(n), T = n.leafs.length, p = Math.round(100 * k / T);
+  if (n.depth === 0) {
+    el.innerHTML = `<div class="rt">Security+</div><div class="rs">SY0-701 exam map</div><div class="rbar"><i style="width:${p}%"></i></div><div class="rm">${k} of ${T} topics known</div>`;
+  } else if (n.depth === 1) {
+    el.innerHTML = `<div class="dn">Domain ${n.dom + 1}</div><div class="dt">${esc(n.t)}</div><div class="dw"><span>${WEIGHTS[n.dom]}% of exam</span><span>${k}/${T}</span></div><div class="pb"><i style="width:${p}%"></i></div>`;
+  } else if (isLeaf(n)) {
+    el.innerHTML = `<div class="lh"><span class="lt">${fmt(n.t)}</span><button class="ck" tabindex="-1" aria-label="Mark as known" title="Mark as known (K)">${I.check}</button></div>${n.d ? `<div class="ld">${fmt(n.d)}</div>` : ""}${n.tip ? `<div class="tp"><b>Exam tip:</b> ${fmt(n.tip)}</div>` : ""}`;
+  } else {
+    el.innerHTML = `<div class="bh">${n.code ? `<span class="cd">${n.code}</span>` : ""}<span class="bt">${esc(n.t)}</span><span class="chev">${I.chev}</span></div>${n.d ? `<div class="bd">${fmt(n.d)}</div>` : ""}<div class="bm"><span>${T} topic${T > 1 ? "s" : ""}</span><span class="pb"><i style="width:${p}%"></i></span><span>${k}/${T}</span></div>`;
+  }
+  el.classList.toggle("open", expanded.has(n.id));
+  el.classList.toggle("known", isLeaf(n) && known.has(n.id));
+  el.classList.toggle("done", !isLeaf(n) && k === T);
+  el.classList.toggle("rev", revealed.has(n.id));
+  el.setAttribute("aria-expanded", isLeaf(n) ? "" : String(expanded.has(n.id)));
+}
+function makeEl(n) {
+  const el = document.createElement("div");
+  el.className = "node " + cls(n);
+  el.dataset.id = n.id; el.tabIndex = -1; el.setAttribute("role", "treeitem");
+  el.setAttribute("aria-label", label(n));
+  el.style.setProperty("--c", color(n));
+  el.style.opacity = 0;
+  fill(el, n);
+  return el;
+}
+
+/* ---------------- layout + animation ---------------- */
+const GX = d => d === 0 ? 84 : d === 1 ? 70 : 54;
+const GY = n => n.depth <= 2 ? 16 : 10;
+const anchorY = r => isLeaf(r.n) && r.n.depth > 1 ? Math.min(r.h / 2, 21) : r.h / 2;
+
+function measure(n) {
+  const r = vis.get(n.id);
+  r.w = r.el.offsetWidth; r.h = r.el.offsetHeight;
+  let ch = 0;
+  if (expanded.has(n.id)) n.children.forEach((c, i) => { measure(c); ch += vis.get(c.id).sub + (i ? GY(c) : 0); });
+  r.ch = ch; r.sub = Math.max(r.h, ch);
+}
+function place(n, x, top) {
+  const r = vis.get(n.id);
+  r.tx = x; r.ty = top + (r.sub - r.h) / 2;
+  if (r.ch) {
+    let y = top + (r.sub - r.ch) / 2;
+    n.children.forEach((c, i) => { if (i) y += GY(c); place(c, x + r.w + GX(n.depth), y); y += vis.get(c.id).sub; });
+  }
+}
+let anim = null, camAnim = null, raf = 0;
+function relayout() {
+  const list = [];
+  (function walk(n) { list.push(n); if (expanded.has(n.id)) n.children.forEach(walk); })(root);
+  const want = new Set(list.map(n => n.id));
+  for (const n of list) {
+    let r = vis.get(n.id);
+    if (!r) {
+      const el = makeEl(n); nodesEl.appendChild(el);
+      let path = null;
+      if (n.parent) {
+        path = document.createElementNS(SVGNS, "path");
+        path.style.stroke = color(n);
+        path.style.strokeWidth = n.depth === 1 ? 5 : n.depth === 2 ? 3.5 : n.depth === 3 ? 2.5 : 2;
+        edgesEl.appendChild(path);
+      }
+      r = { n, el, path, x: null, y: null, op: 0 };
+      vis.set(n.id, r);
+    } else { r.removing = false; fill(r.el, n); }
+  }
+  for (const [id, r] of vis) if (!want.has(id)) r.removing = true;
+  measure(root); place(root, 0, -vis.get("r").sub / 2);
+  for (const r of vis.values()) {
+    if (r.removing) {
+      let a = r.n.parent; while (a && !want.has(a.id)) a = a.parent;
+      const ar = vis.get(a.id); r.tx = ar.tx + ar.w - r.w * 0.6; r.ty = ar.ty + anchorY(ar) - anchorY(r); r.to = 0;
+    } else r.to = 1;
+    if (r.x === null) {
+      const pr = r.n.parent && vis.get(r.n.parent.id);
+      if (pr) { const px = pr.x ?? pr.tx, py = pr.y ?? pr.ty; r.x = px + pr.w - r.w * 0.6; r.y = py + anchorY(pr) - anchorY(r); }
+      else { r.x = r.tx; r.y = r.ty; }
+      r.op = 0;
+    }
+    r.fx = r.x; r.fy = r.y; r.fo = r.op;
+  }
+  anim = { t0: performance.now(), dur: RM ? 0 : 360 };
+  kick();
+  markPath();
+}
+function kick() { if (!raf) raf = requestAnimationFrame(tick); }
+function apply(r) {
+  r.el.style.transform = `translate(${r.x}px,${r.y}px)`;
+  r.el.style.opacity = r.op;
+  r.el.style.pointerEvents = r.removing ? "none" : "";
+}
+function drawEdges() {
+  for (const r of vis.values()) {
+    if (!r.path) continue;
+    const pr = vis.get(r.n.parent.id); if (!pr) continue;
+    const x1 = pr.x + pr.w, y1 = pr.y + anchorY(pr), x2 = r.x, y2 = r.y + anchorY(r);
+    const dx = Math.max(20, (x2 - x1) * 0.55);
+    r.path.setAttribute("d", `M${x1.toFixed(1)},${y1.toFixed(1)}C${(x1 + dx).toFixed(1)},${y1.toFixed(1)} ${(x2 - dx).toFixed(1)},${y2.toFixed(1)} ${x2.toFixed(1)},${y2.toFixed(1)}`);
+    r.path.style.strokeOpacity = Math.min(r.op, pr.op);
+  }
+}
+const ease3 = k => 1 - Math.pow(1 - k, 3);
+const easeIO = k => k < .5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;
+function tick(now) {
+  raf = 0;
+  if (anim) {
+    const k = anim.dur ? Math.min(1, (now - anim.t0) / anim.dur) : 1, e = ease3(k);
+    for (const r of vis.values()) { r.x = r.fx + (r.tx - r.fx) * e; r.y = r.fy + (r.ty - r.fy) * e; r.op = r.fo + (r.to - r.fo) * e; apply(r); }
+    drawEdges();
+    if (k >= 1) {
+      for (const [id, r] of [...vis]) if (r.removing) { r.el.remove(); r.path && r.path.remove(); vis.delete(id); }
+      anim = null;
+    }
+  }
+  if (camAnim) {
+    const c = camAnim, k = c.dur ? Math.min(1, (now - c.t0) / c.dur) : 1, e = easeIO(k);
+    setCam(c.fx + (c.x - c.fx) * e, c.fy + (c.y - c.fy) * e, c.fs + (c.s - c.fs) * e);
+    if (k >= 1) camAnim = null;
+  }
+  if (anim || camAnim) kick();
+}
+
+/* ---------------- camera ---------------- */
+const cam = { x: 0, y: 0, s: 1 };
+function setCam(x, y, s) {
+  cam.x = x; cam.y = y; cam.s = s;
+  world.style.transform = `translate(${x}px,${y}px) scale(${s})`;
+  stage.style.backgroundSize = `${22 * s}px ${22 * s}px`;
+  stage.style.backgroundPosition = `${x}px ${y}px`;
+}
+function animCam(x, y, s, dur = 460) {
+  if (RM) { setCam(x, y, s); return; }
+  camAnim = { fx: cam.x, fy: cam.y, fs: cam.s, x, y, s, t0: performance.now(), dur }; kick();
+}
+function viewport() {
+  let w = stage.clientWidth, h = stage.clientHeight;
+  if (document.body.classList.contains("panel-open")) { if (isMobile()) h -= panel.offsetHeight; else w -= panel.offsetWidth; }
+  return { w, h };
+}
+function boxOf(nodes, pad = 0) {
+  let x1 = Infinity, y1 = Infinity, x2 = -Infinity, y2 = -Infinity;
+  for (const n of nodes) { const r = vis.get(n.id); if (!r || r.removing) continue; x1 = Math.min(x1, r.tx); y1 = Math.min(y1, r.ty); x2 = Math.max(x2, r.tx + r.w); y2 = Math.max(y2, r.ty + r.h); }
+  return { x1: x1 - pad, y1: y1 - pad, x2: x2 + pad, y2: y2 + pad };
+}
+function ensureVisible(b, o = {}) {
+  const V = viewport(), pad = isMobile() ? 16 : 36;
+  const bw = b.x2 - b.x1, bh = b.y2 - b.y1;
+  const fitS = Math.min((V.w - 2 * pad) / bw, (V.h - 2 * pad) / bh);
+  let s = cam.s, x, y;
+  if (o.fit) s = clamp(fitS, o.minS ?? 0.15, o.maxS ?? 1);
+  else {
+    if (s > fitS) s = Math.max(o.minS ?? 0.5, fitS);
+    if (o.atLeast && s < o.atLeast) s = Math.min(o.atLeast, 1);
+  }
+  if (o.fit) { x = (V.w - bw * s) / 2 - b.x1 * s; y = (V.h - bh * s) / 2 - b.y1 * s; }
+  else {
+    // keep the box's left edge where it is on screen when scale changes
+    x = (b.x1 * cam.s + cam.x) - b.x1 * s; y = ((b.y1 + b.y2) / 2 * cam.s + cam.y) - (b.y1 + b.y2) / 2 * s;
+    const sx1 = b.x1 * s + x, sx2 = b.x2 * s + x, sy1 = b.y1 * s + y, sy2 = b.y2 * s + y;
+    if (bw * s > V.w - 2 * pad) x += pad - sx1; else if (sx1 < pad) x += pad - sx1; else if (sx2 > V.w - pad) x -= sx2 - (V.w - pad);
+    if (bh * s > V.h - 2 * pad) y += pad - sy1; else if (sy1 < pad) y += pad - sy1; else if (sy2 > V.h - pad) y -= sy2 - (V.h - pad);
+  }
+  animCam(x, y, s);
+}
+function zoomAt(px, py, f, animate) {
+  const ns = clamp(cam.s * f, 0.15, 2.2);
+  const x = px - (px - cam.x) * (ns / cam.s), y = py - (py - cam.y) * (ns / cam.s);
+  animate ? animCam(x, y, ns, 220) : setCam(x, y, ns);
+}
+function focusBranch(n, list) {
+  // drill-down camera: keep text readable, show the opened node with its children
+  const V = viewport(), pad = isMobile() ? 14 : 40;
+  const leafKids = n.children.some(isLeaf);
+  const b = boxOf(list || [n, ...n.children], 0);
+  const bw0 = b.x2 - b.x1, bh0 = b.y2 - b.y1;
+  const fitS = Math.min((V.w - 2 * pad) / bw0, (V.h - 2 * pad) / bh0);
+  let s = clamp(Math.max(cam.s, leafKids ? 0.92 : 0.82), 0.3, 1.1);
+  if (fitS < s) s = Math.max(fitS, leafKids ? 0.8 : 0.64);
+  if (isMobile()) s = Math.min(s, Math.max(0.62, (V.w - 2 * pad) / bw0));
+  const bw = bw0 * s, bh = bh0 * s;
+  const x = bw <= V.w - 2 * pad ? (V.w - bw) / 2 - b.x1 * s : pad - b.x1 * s;
+  const y = bh <= V.h - 2 * pad ? (V.h - bh) / 2 - b.y1 * s : pad - b.y1 * s;
+  animCam(x, y, s);
+}
+function fitAll() {
+  const list = [...vis.values()].filter(r => !r.removing).map(r => r.n);
+  ensureVisible(boxOf(list, 10), { fit: true, minS: 0.12, maxS: 1 });
+}
+
+/* ---------------- actions ---------------- */
+function collapseDeep(n) { if (n !== root) expanded.delete(n.id); n.children.forEach(collapseDeep); }
+function toggle(n, open = !expanded.has(n.id)) {
+  if (isLeaf(n)) return;
+  if (n === root) { root.children.forEach(collapseDeep); save(); relayout(); fitAll(); return; }
+  if (open) {
+    expanded.add(n.id);
+    if (S.focus && n.parent) n.parent.children.forEach(s => { if (s !== n) collapseDeep(s); });
+  } else collapseDeep(n);
+  save(); relayout();
+  if (open) focusBranch(n);
+  else ensureVisible(boxOf([n], 8), {});
+}
+function expandAll(n) {
+  (function ex(m) { if (!isLeaf(m)) { expanded.add(m.id); m.children.forEach(ex); } })(n);
+  if (S.focus && n.parent) n.parent.children.forEach(s => { if (s !== n) collapseDeep(s); });
+  save(); relayout();
+  focusBranch(n, [n, ...n.children]);
+}
+function revealPath(n) {
+  const anc = ancestors(n);
+  anc.forEach(a => {
+    expanded.add(a.id);
+    if (S.focus && a.parent) a.parent.children.forEach(s => { if (s !== a) collapseDeep(s); });
+  });
+  if (S.focus && n.parent) n.parent.children.forEach(s => { if (s !== n && !isLeaf(s)) collapseDeep(s); });
+}
+function goTo(n, o = {}) {
+  revealPath(n); save(); relayout();
+  select(n, { atLeast: isLeaf(n) ? 0.85 : 0.6 });
+  if (o.flash) { nodesEl.querySelectorAll(".flash").forEach(x => x.classList.remove("flash")); const r = vis.get(n.id); r.el.classList.remove("flash"); void r.el.offsetWidth; r.el.classList.add("flash"); }
+}
+function select(n, o = {}) {
+  if (sel) vis.get(sel.id)?.el.classList.remove("sel");
+  sel = n;
+  const r = vis.get(n.id);
+  if (r) { r.el.classList.add("sel"); r.el.focus({ preventScroll: true }); }
+  renderPanel();
+  if (!isMobile() || isLeaf(n) || o.panel) openPanel(); else closePanel(true);
+  markPath();
+  if (o.scroll !== false) ensureVisible(boxOf([n], 12), { atLeast: o.atLeast, minS: 0.5 });
+}
+function markPath() {
+  const on = new Set(); let p = sel; while (p) { on.add(p.id); p = p.parent; }
+  for (const r of vis.values()) if (r.path) r.path.classList.toggle("on", on.has(r.n.id));
+}
+function toggleKnown(n, v = !known.has(n.id)) {
+  if (!isLeaf(n)) return;
+  v ? known.add(n.id) : known.delete(n.id); save(); refreshCounts();
+}
+function setKnownMany(list, v) { list.forEach(l => v ? known.add(l.id) : known.delete(l.id)); save(); refreshCounts(); }
+function refreshCounts() {
+  for (const r of vis.values()) if (!r.removing) fill(r.el, r.n);
+  renderLegend(); renderPanel();
+}
+function nextTopic(dir) {
+  let idx;
+  if (!sel) idx = dir > 0 ? -1 : 0;
+  else if (isLeaf(sel)) idx = leaves.indexOf(sel);
+  else { const f = leaves.indexOf(sel.leafs[0]); idx = dir > 0 ? f - 1 : f; }
+  const t = leaves[clamp(idx + dir, 0, leaves.length - 1)];
+  if (t) goTo(t, { flash: true });
+}
+function setLevel(L) {
+  expanded.clear(); expanded.add("r");
+  for (const n of all) if (!isLeaf(n) && n.depth < L) expanded.add(n.id);
+  save(); relayout();
+  if (L <= 2) fitAll();
+  else { // too tall to fit legibly: start at the top-left, readable, and let the user scroll down
+    const b = boxOf([...vis.values()].filter(r => !r.removing).map(r => r.n)), pad = 30, s = isMobile() ? 0.62 : 0.8;
+    animCam(pad - b.x1 * s, pad - b.y1 * s, s);
+    toast("Everything is open. Scroll down to read, or press F to see the whole map.");
+  }
+}
+function focusDomain(i) {
+  const d = domains[i]; if (!d) return;
+  root.children.forEach(collapseDeep); expanded.add(d.id);
+  save(); relayout();
+  select(d, { scroll: false });
+  focusBranch(d);
+}
+function setRecall(v) {
+  S.recall = v; document.body.classList.toggle("recall", v); revealed.clear();
+  $("#bRecall").setAttribute("aria-pressed", String(v)); save(); relayout();
+  toast(v ? "Recall mode on: answers are hidden until you tap a card" : "Recall mode off");
+}
+function setFocus(v) { S.focus = v; $("#bFocus").setAttribute("aria-pressed", String(v)); save(); toast(v ? "Auto-collapse on: opening a branch closes its siblings" : "Auto-collapse off: branches stay open"); }
+function setTheme(t) {
+  S.theme = t; if (t === "auto") document.documentElement.removeAttribute("data-theme"); else document.documentElement.dataset.theme = t; save();
+}
+function curTheme() { return S.theme !== "auto" ? S.theme : (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"); }
+
+/* ---------------- panel ---------------- */
+function openPanel() { if (!document.body.classList.contains("panel-open")) document.body.classList.add("panel-open"); }
+function closePanel(keepSel) {
+  document.body.classList.remove("panel-open");
+  if (!keepSel && sel) { vis.get(sel.id)?.el.classList.remove("sel"); sel = null; markPath(); }
+}
+function renderPanel() {
+  const n = sel; if (!n) return;
+  panel.style.setProperty("--c", color(n));
+  const k = kc(n), T = n.leafs.length;
+  const crumbs = ancestors(n).map(a => `<button data-go="${a.id}" title="${esc(label(a))}">${esc(a === root ? "Map" : (a.code || a.t))}</button>`).join("<i>›</i>");
+  let body = `${n.d ? `<p class="pdesc">${fmt(n.d)}</p>` : ""}${n.tip ? `<div class="ptip"><strong>Exam tip</strong>${fmt(n.tip)}</div>` : ""}`;
+  if (isLeaf(n)) {
+    const kn = known.has(n.id);
+    body += `<div class="pact"><button class="btn ${kn ? "ok" : "pri"}" data-act="known">${I.check}${kn ? "Known" : "Mark as known"}</button></div>`;
+    const sibs = n.parent.children.filter(s => s !== n);
+    if (sibs.length) body += `<p class="pstat" style="margin-top:18px">Also under ${esc(n.parent.t)}</p><div class="pkids">${sibs.map(kidHTML).join("")}</div>`;
+  } else {
+    body += `<p class="pstat">${T} topic${T > 1 ? "s" : ""} inside, ${k} known${n.depth === 1 ? `, ${WEIGHTS[n.dom]}% of the exam` : ""}</p>`;
+    body += `<div class="pact">${n !== root ? `<button class="btn pri" data-act="toggle">${expanded.has(n.id) ? "Close branch" : "Open branch"}</button><button class="btn" data-act="all">${I.open}Open everything inside</button>` : ""}<button class="btn" data-act="study">${I.cards}Flashcards</button></div>`;
+    body += `<div class="pkids">${n.children.map(kidHTML).join("")}</div>`;
+    if (n !== root) body += `<div class="pact"><button class="btn" data-act="allknown">${k === T ? "Clear known marks" : "Mark all as known"}</button></div>`;
+  }
+  const li = isLeaf(n) ? leaves.indexOf(n) : -1;
+  panel.innerHTML = `<div class="ph">${crumbs ? `<div class="crumbs">${crumbs}</div>` : ""}<div class="ptitle"><h2>${n.code ? `<span class="cd">${n.code}</span>` : ""}${n === root ? "Security+ SY0-701" : esc(n.t)}</h2><button class="pclose" data-act="close" aria-label="Close panel">${I.close}</button></div></div>
+  <div class="pb2">${body}</div>
+  <div class="pnav"><button class="btn" data-act="prev" ${li === 0 ? "disabled" : ""}>Previous topic</button><button class="btn" data-act="next">Next topic</button></div>`;
+}
+function kidHTML(c) {
+  const d = c.d.length > 120 ? c.d.slice(0, 117).replace(/\s+\S*$/, "") + "…" : c.d;
+  const done = isLeaf(c) ? known.has(c.id) : kc(c) === c.leafs.length;
+  return `<button class="kid${done ? " k" : ""}" data-go="${c.id}" style="--c:${color(c)}"><span class="kd"></span><span class="kt">${c.code ? c.code + " " : ""}${esc(c.t)}${isLeaf(c) ? "" : ` <span style="font-weight:400;color:var(--muted);font-size:12px">${kc(c)}/${c.leafs.length}</span>`}</span>${d ? `<span class="kx">${fmt(d)}</span>` : ""}</button>`;
+}
+panel.addEventListener("click", e => {
+  const g = e.target.closest("[data-go]");
+  if (g) { goTo(byId.get(g.dataset.go), { flash: true }); return; }
+  const a = e.target.closest("[data-act]"); if (!a || !sel) return;
+  const act = a.dataset.act;
+  if (act === "close") closePanel();
+  else if (act === "known") toggleKnown(sel);
+  else if (act === "toggle") { toggle(sel); renderPanel(); }
+  else if (act === "all") { expandAll(sel); renderPanel(); }
+  else if (act === "study") openStudy(sel);
+  else if (act === "allknown") setKnownMany(sel.leafs, kc(sel) !== sel.leafs.length);
+  else if (act === "next") nextTopic(1);
+  else if (act === "prev") nextTopic(-1);
+});
+
+/* ---------------- legend ---------------- */
+function renderLegend() {
+  const k = kc(root), T = root.leafs.length;
+  $("#legend").innerHTML = `<h3><button class="lgt" aria-expanded="${!legMin}" title="Show or hide the domain list">Domains</button> <span>${k}/${T} known</span></h3><div class="lgs">${domains.map((d, i) => `<button class="lg" data-dom="${i}" style="--c:${color(d)}" title="Domain ${i + 1}: ${esc(d.t)} (${WEIGHTS[i]}%) — press ${i + 1}"><span class="sw"></span><span class="lgn">${esc(d.t)}</span><span class="lgp">${WEIGHTS[i]}%</span><span class="lgb"><i style="width:${pct(d)}%"></i></span></button>`).join("")}</div>`;
+}
+let legMin = false;
+$("#legend").addEventListener("click", e => {
+  if (e.target.closest(".lgt")) { legMin = !legMin; $("#legend").classList.toggle("min", legMin); renderLegend(); return; }
+  const b = e.target.closest("[data-dom]"); if (b) focusDomain(+b.dataset.dom);
+});
+
+/* ---------------- pointer: pan / pinch / click ---------------- */
+const ptrs = new Map(); let drag = null, moved = false, pinch = null;
+function local(e) { const r = stage.getBoundingClientRect(); return { x: e.clientX - r.left, y: e.clientY - r.top }; }
+stage.addEventListener("pointerdown", e => {
+  if (e.button !== undefined && e.button > 0) return;
+  ptrs.set(e.pointerId, local(e)); camAnim = null;
+  if (ptrs.size === 1) { moved = false; const p = local(e); drag = { x: p.x, y: p.y, cx: cam.x, cy: cam.y }; }
+  if (ptrs.size === 2) { const [a, b] = [...ptrs.values()]; pinch = { d: Math.hypot(a.x - b.x, a.y - b.y), mx: (a.x + b.x) / 2, my: (a.y + b.y) / 2, s: cam.s, cx: cam.x, cy: cam.y }; moved = true; }
+});
+addEventListener("pointermove", e => {
+  if (!ptrs.has(e.pointerId)) return;
+  const p = local(e); ptrs.set(e.pointerId, p);
+  if (ptrs.size >= 2 && pinch) {
+    const [a, b] = [...ptrs.values()];
+    const d = Math.hypot(a.x - b.x, a.y - b.y), mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2;
+    const ns = clamp(pinch.s * d / pinch.d, 0.15, 2.2);
+    setCam(mx - (pinch.mx - pinch.cx) * (ns / pinch.s), my - (pinch.my - pinch.cy) * (ns / pinch.s), ns);
+  } else if (drag) {
+    const dx = p.x - drag.x, dy = p.y - drag.y;
+    if (!moved && Math.abs(dx) + Math.abs(dy) > 6) { moved = true; stage.classList.add("drag"); }
+    if (moved) setCam(drag.cx + dx, drag.cy + dy, cam.s);
+  }
+});
+function ptrEnd(e) {
+  if (!ptrs.has(e.pointerId)) return;
+  ptrs.delete(e.pointerId);
+  if (ptrs.size === 1) { const p = [...ptrs.values()][0]; drag = { x: p.x, y: p.y, cx: cam.x, cy: cam.y }; pinch = null; }
+  if (ptrs.size === 0) { drag = null; pinch = null; stage.classList.remove("drag"); }
+}
+addEventListener("pointerup", ptrEnd); addEventListener("pointercancel", ptrEnd);
+stage.addEventListener("wheel", e => {
+  e.preventDefault(); camAnim = null;
+  const p = local(e);
+  if (e.ctrlKey || e.metaKey) zoomAt(p.x, p.y, Math.exp(-e.deltaY * (e.deltaMode ? 0.05 : 0.0025)));
+  else { const m = e.deltaMode ? 30 : 1; setCam(cam.x - (e.shiftKey && !e.deltaX ? e.deltaY : e.deltaX) * m, cam.y - (e.shiftKey && !e.deltaX ? 0 : e.deltaY) * m, cam.s); }
+}, { passive: false });
+nodesEl.addEventListener("click", e => {
+  if (moved) { moved = false; return; }
+  const el = e.target.closest(".node"); if (!el) return;
+  const n = byId.get(el.dataset.id); if (!n) return;
+  if (e.target.closest(".ck")) { toggleKnown(n); return; }
+  if (isLeaf(n)) {
+    if (S.recall && !revealed.has(n.id)) { revealed.add(n.id); el.classList.add("rev"); relayout(); }
+    select(n, { atLeast: 0 });
+  } else {
+    if (n === root) { select(n, { scroll: false }); toggle(n); return; }
+    select(n, { scroll: false }); toggle(n); renderPanel();
+  }
+});
+nodesEl.addEventListener("dblclick", e => {
+  const el = e.target.closest(".node"); if (!el) return;
+  const n = byId.get(el.dataset.id); if (n && !isLeaf(n) && n !== root) { expandAll(n); renderPanel(); }
+});
+
+/* ---------------- keyboard ---------------- */
+const modalOpen = () => document.querySelector(".modal.on");
+addEventListener("keydown", e => {
+  const tag = (e.target.tagName || "").toLowerCase();
+  if ((e.key === "k" && (e.ctrlKey || e.metaKey))) { e.preventDefault(); openSearch(); return; }
+  if (e.key === "Escape") { const m = modalOpen(); if (m) { closeModal(m); return; } if ($("#menu").classList.contains("on")) { $("#menu").classList.remove("on"); return; } closePanel(); return; }
+  if (modalOpen() || tag === "input" || tag === "select" || tag === "textarea" || e.ctrlKey || e.metaKey || e.altKey) return;
+  const n = sel || root;
+  const k = e.key;
+  if (k === "/") { e.preventDefault(); openSearch(); }
+  else if (k === "ArrowRight") { e.preventDefault(); if (!sel) return select(root); if (!isLeaf(n)) { if (!expanded.has(n.id)) toggle(n, true); else select(n.children[0]); renderPanel(); } }
+  else if (k === "ArrowLeft") { e.preventDefault(); if (!isLeaf(n) && expanded.has(n.id) && n !== root) { toggle(n, false); renderPanel(); } else if (n.parent) select(n.parent); }
+  else if (k === "ArrowDown" || k === "ArrowUp") {
+    e.preventDefault(); if (!sel) return select(root); if (!n.parent) return;
+    const sib = n.parent.children, i = sib.indexOf(n) + (k === "ArrowDown" ? 1 : -1);
+    if (sib[i]) select(sib[i]);
+  }
+  else if (k === "Enter") { e.preventDefault(); if (!sel) return; isLeaf(n) ? toggleKnown(n) : (toggle(n), renderPanel()); }
+  else if (k === " ") { e.preventDefault(); if (!sel) return; if (isLeaf(n)) { if (S.recall) { revealed.has(n.id) ? revealed.delete(n.id) : revealed.add(n.id); relayout(); } else toggleKnown(n); } else { toggle(n); renderPanel(); } }
+  else if (k === "k" || k === "K") { if (sel && isLeaf(sel)) toggleKnown(sel); }
+  else if (k === "n" || k === "N") nextTopic(1);
+  else if (k === "p" || k === "P") nextTopic(-1);
+  else if (k === "f" || k === "F") fitAll();
+  else if (k === "r" || k === "R") setRecall(!S.recall);
+  else if (k === "s" || k === "S") openStudy(sel);
+  else if (k === "g" || k === "G") openGloss();
+  else if (k === "t" || k === "T") setTheme(curTheme() === "dark" ? "light" : "dark");
+  else if (k === "?") openModal($("#mHelp"));
+  else if (k === "+" || k === "=") zoomBy(1.25);
+  else if (k === "-" || k === "_") zoomBy(0.8);
+  else if (/^[1-5]$/.test(k)) focusDomain(+k - 1);
+});
+function zoomBy(f) { const V = viewport(); zoomAt(V.w / 2, V.h / 2, f, true); }
+
+/* ---------------- modals ---------------- */
+let lastFocus = null;
+function openModal(m) { lastFocus = document.activeElement; document.querySelectorAll(".modal.on").forEach(x => x.classList.remove("on")); m.classList.add("on"); $("#menu").classList.remove("on"); const f = m.querySelector("input,button.pri,select,button"); f && setTimeout(() => f.focus(), 20); }
+function closeModal(m) { m.classList.remove("on"); if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true }); }
+document.querySelectorAll(".modal").forEach(m => m.addEventListener("pointerdown", e => { if (e.target === m) closeModal(m); }));
+document.querySelectorAll("[data-close]").forEach(b => b.addEventListener("click", () => closeModal(b.closest(".modal"))));
+
+/* search */
+const IDX = all.filter(n => n !== root).map(n => ({ n, t: n.t.toLowerCase(), d: (n.d + " " + n.tip).toLowerCase(), code: n.code }));
+let results = [], act = 0;
+function hl(s, q) { const i = s.toLowerCase().indexOf(q); if (!q || i < 0) return esc(s); return esc(s.slice(0, i)) + "<mark>" + esc(s.slice(i, i + q.length)) + "</mark>" + esc(s.slice(i + q.length)); }
+function runSearch(q) {
+  q = q.trim().toLowerCase(); results = [];
+  if (q) {
+    const words = q.split(/\s+/);
+    for (const it of IDX) {
+      let sc = 0;
+      const wre = new RegExp("(^|[^a-z0-9])" + q.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "($|[^a-z0-9])");
+      if (it.code && it.code === q) sc = 120;
+      else if (it.t.includes("(" + q + ")")) sc = 115;
+      else if (it.t === q) sc = 100;
+      else if (wre.test(it.t)) sc = 85;
+      else if (it.t.startsWith(q)) sc = 80;
+      else if (it.t.includes(q)) sc = 65;
+      else if (words.every(w => it.t.includes(w))) sc = 50;
+      else if (it.d.includes(q)) sc = 32;
+      else if (words.every(w => (it.t + " " + it.d).includes(w))) sc = 20;
+      if (sc) results.push({ sc: sc + (isLeaf(it.n) ? 1 : 3) - it.n.depth * 0.1, n: it.n });
+    }
+    for (const g of GL) {
+      const a = g.a.toLowerCase(); let sc = 0;
+      if (a === q) sc = 110; else if (a.startsWith(q)) sc = 70; else if (g.e.toLowerCase().includes(q)) sc = 45; else if (g.d.toLowerCase().includes(q)) sc = 12;
+      if (sc) results.push({ sc, g });
+    }
+    results.sort((a, b) => b.sc - a.sc); results = results.slice(0, 60);
+  }
+  act = 0; renderResults(q);
+}
+function renderResults(q) {
+  const L = $("#sList");
+  if (!q) { L.innerHTML = `<div class="empty">Type a topic, acronym or objective number, for example <b>ALE</b>, <b>hot site</b> or <b>4.8</b>.</div>`; return; }
+  if (!results.length) { L.innerHTML = `<div class="empty">Nothing matches "${esc(q)}". Try a shorter word or an acronym.</div>`; return; }
+  L.innerHTML = results.map((r, i) => {
+    if (r.g) return `<button class="res${i === act ? " act" : ""}" data-i="${i}" style="--c:var(--c3)"><span class="rt1"><span class="dot" style="background:var(--muted)"></span>${hl(r.g.a, q)} <span style="font-weight:400">${hl(r.g.e, q)}</span><span class="tag">Acronym</span></span><span class="rx">${esc(r.g.d)}</span></button>`;
+    const n = r.n, path = ancestors(n).slice(1).map(a => a.code || a.t).join(" › ");
+    return `<button class="res${i === act ? " act" : ""}" data-i="${i}" style="--c:${color(n)}"><span class="rt1"><span class="dot"></span>${n.code ? n.code + " " : ""}${hl(n.t, q)}${isLeaf(n) ? "" : `<span class="tag">Branch</span>`}</span>${path ? `<span class="rp">${esc(path)}</span>` : ""}${n.d ? `<span class="rx">${hl(n.d, q)}</span>` : ""}</button>`;
+  }).join("");
+  const a = L.querySelector(".act"); a && a.scrollIntoView({ block: "nearest" });
+}
+function choose(i) {
+  const r = results[i]; if (!r) return;
+  closeModal($("#mSearch"));
+  if (r.g) { openGloss(r.g.a); return; }
+  goTo(r.n, { flash: true });
+}
+function openSearch() { const m = $("#mSearch"); openModal(m); const inp = $("#sInput"); inp.select(); runSearch(inp.value); }
+$("#sInput").addEventListener("input", e => runSearch(e.target.value));
+$("#sInput").addEventListener("keydown", e => {
+  if (e.key === "ArrowDown") { e.preventDefault(); act = Math.min(act + 1, results.length - 1); renderResults(e.target.value.trim().toLowerCase()); }
+  else if (e.key === "ArrowUp") { e.preventDefault(); act = Math.max(act - 1, 0); renderResults(e.target.value.trim().toLowerCase()); }
+  else if (e.key === "Enter") { e.preventDefault(); choose(act); }
+});
+$("#sList").addEventListener("click", e => { const b = e.target.closest("[data-i]"); if (b) choose(+b.dataset.i); });
+
+/* glossary */
+function renderGloss(q) {
+  q = (q || "").trim().toLowerCase();
+  const list = q ? GL.filter(g => g.a.toLowerCase().includes(q) || g.e.toLowerCase().includes(q) || g.d.toLowerCase().includes(q))
+    .sort((a, b) => (b.a.toLowerCase() === q) - (a.a.toLowerCase() === q) || (b.a.toLowerCase().startsWith(q)) - (a.a.toLowerCase().startsWith(q))) : GL;
+  $("#gList").innerHTML = list.length ? list.map(g => `<div class="gl"><span class="ga">${hl(g.a, q)}</span><span class="ge">${hl(g.e, q)}</span><span class="gd">${esc(g.d)}</span></div>`).join("") : `<div class="empty">No acronym matches "${esc(q)}".</div>`;
+  $("#gCount").textContent = `${list.length} of ${GL.length}`;
+}
+function openGloss(q = "") { openModal($("#mGloss")); const inp = $("#gInput"); inp.value = q; renderGloss(q); $("#gList").scrollTop = 0; }
+$("#gInput").addEventListener("input", e => renderGloss(e.target.value));
+
+/* study / flashcards */
+const ST = { scope: "r", mode: "term", unknownOnly: true, deck: [], i: 0, shown: false, got: 0, again: [] };
+function openStudy(n) {
+  ST.scope = n && !isLeaf(n) ? n.id : (n && n.parent ? n.parent.id : ST.scope || "r");
+  renderStudySetup(); openModal($("#mStudy"));
+}
+function scopeOptions() {
+  const opts = [["r", "Everything"]].concat(domains.map(d => [d.id, `Domain ${d.dom + 1}: ${d.t}`]));
+  domains.forEach(d => d.children.forEach(o => { if (!isLeaf(o)) opts.push([o.id, `  ${o.code} ${o.t}`]); }));
+  const cur = byId.get(ST.scope);
+  if (cur && !opts.some(o => o[0] === cur.id)) opts.push([cur.id, `Current branch: ${cur.t}`]);
+  return opts.map(([id, t]) => { const n = byId.get(id); return `<option value="${id}" ${id === ST.scope ? "selected" : ""}>${esc(t)} (${n.leafs.length})</option>`; }).join("");
+}
+function renderStudySetup() {
+  $("#stTitle").textContent = "Flashcards";
+  $("#stBody").innerHTML = `<div class="sopt">
+    <label class="row">Cards from<select id="stScope">${scopeOptions()}</select></label>
+    <div class="row" style="display:flex;flex-direction:column;gap:6px;font-size:13.5px;font-weight:700">Show first
+      <div class="chips"><button class="chip" data-mode="term" aria-pressed="${ST.mode === "term"}">The term</button><button class="chip" data-mode="def" aria-pressed="${ST.mode === "def"}">The explanation</button></div></div>
+    <label class="chk"><input type="checkbox" id="stUnknown" ${ST.unknownOnly ? "checked" : ""}> Skip topics already marked as known</label>
+    <p id="stInfo" class="pstat" style="margin:0"></p>
+    <div><button class="btn pri" id="stGo" style="--c:var(--c3)">${I.cards}Start</button></div></div>`;
+  const info = () => { const n = byId.get($("#stScope").value); const d = deckFor(n); $("#stInfo").textContent = d.length ? `${d.length} card${d.length > 1 ? "s" : ""} in this deck, shuffled.` : "Every topic here is already marked known. Untick the box to review them anyway."; $("#stGo").disabled = !d.length; };
+  $("#stScope").onchange = e => { ST.scope = e.target.value; info(); };
+  $("#stUnknown").onchange = e => { ST.unknownOnly = e.target.checked; info(); };
+  $("#stBody").querySelectorAll("[data-mode]").forEach(b => b.onclick = () => { ST.mode = b.dataset.mode; $("#stBody").querySelectorAll("[data-mode]").forEach(x => x.setAttribute("aria-pressed", String(x === b))); });
+  $("#stGo").onclick = () => startDeck(deckFor(byId.get(ST.scope)));
+  info();
+}
+function deckFor(n) { return n.leafs.filter(l => l.d && (!ST.unknownOnly || !known.has(l.id))); }
+function startDeck(d) {
+  ST.deck = d.slice().sort(() => Math.random() - 0.5); ST.i = 0; ST.shown = false; ST.got = 0; ST.again = [];
+  renderCard();
+}
+function mask(n) {
+  let d = n.d;
+  const parts = n.t.split(/[()\/,]| vs /i).map(s => s.trim()).filter(s => s.length >= 3);
+  parts.sort((a, b) => b.length - a.length).forEach(p => { const re = new RegExp(p.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "gi"); d = d.replace(re, "_____"); });
+  return d;
+}
+function renderCard() {
+  const total = ST.deck.length;
+  if (ST.i >= total) {
+    $("#stTitle").textContent = "Deck finished";
+    $("#stBody").innerHTML = `<div class="card" style="--c:var(--known)"><div class="cq">${ST.got} of ${total} known</div><div class="ca">${ST.again.length ? `${ST.again.length} card${ST.again.length > 1 ? "s" : ""} to review again. Cards you got right are now ticked on the map.` : "Clean sweep. Every card in this deck is now ticked on the map."}</div></div>
+      <div class="sfoot"><button class="btn" id="stBack">Choose another deck</button>${ST.again.length ? `<button class="btn pri" id="stRe" style="--c:var(--c3)">Review the ${ST.again.length} again</button>` : ""}</div>`;
+    $("#stBack").onclick = renderStudySetup;
+    const re = $("#stRe"); if (re) re.onclick = () => startDeck(ST.again);
+    return;
+  }
+  const n = ST.deck[ST.i];
+  const path = ancestors(n).slice(1).map(a => a.code || a.t).join(" › ");
+  const q = ST.mode === "term" ? `<div class="cq">${fmt(n.t)}</div>` : `<div class="cq long">${fmt(mask(n))}</div>`;
+  const ans = ST.mode === "term" ? `<div class="ca">${fmt(n.d)}${n.tip ? `<div class="ptip" style="margin:10px 0 0"><strong>Exam tip</strong>${fmt(n.tip)}</div>` : ""}</div>` : `<div class="ca big">${fmt(n.t)}</div>`;
+  $("#stTitle").textContent = `Card ${ST.i + 1} of ${total}`;
+  $("#stBody").innerHTML = `<div class="sprog"><i style="width:${100 * ST.i / total}%"></i></div>
+    <div class="card" style="--c:${color(n)}"><div class="cp">${esc(path)}</div>${q}${ST.shown ? ans : ""}</div>
+    <div class="sfoot"><span class="sp">${ST.got} known so far</span>${ST.shown
+      ? `<button class="btn" id="stNo">Still learning <kbd>1</kbd></button><button class="btn ok" id="stYes">${I.check}Got it <kbd>2</kbd></button>`
+      : `<button class="btn pri" id="stShow" style="--c:var(--c3)">Show answer <kbd>Space</kbd></button>`}</div>`;
+  if (ST.shown) { $("#stNo").onclick = () => grade(false); $("#stYes").onclick = () => grade(true); $("#stYes").focus(); }
+  else { $("#stShow").onclick = () => { ST.shown = true; renderCard(); }; $("#stShow").focus(); }
+}
+function grade(ok) {
+  const n = ST.deck[ST.i];
+  if (ok) { ST.got++; known.add(n.id); save(); refreshCounts(); } else ST.again.push(n);
+  ST.i++; ST.shown = false; renderCard();
+}
+$("#mStudy").addEventListener("keydown", e => {
+  if (!ST.deck.length || ST.i >= ST.deck.length || !$("#stBody .card")) return;
+  if (e.target.tagName === "SELECT") return;
+  if (!ST.shown && (e.key === " " || e.key === "Enter")) { e.preventDefault(); ST.shown = true; renderCard(); }
+  else if (ST.shown && e.key === "1") grade(false);
+  else if (ST.shown && (e.key === "2" || e.key === " ")) { e.preventDefault(); grade(true); }
+});
+
+/* ---------------- toolbar & menu ---------------- */
+document.querySelectorAll("[data-lv]").forEach(b => b.addEventListener("click", () => setLevel(+b.dataset.lv)));
+$("#openSearch").onclick = openSearch;
+$("#bFocus").onclick = () => setFocus(!S.focus);
+$("#bRecall").onclick = () => setRecall(!S.recall);
+$("#bStudy").onclick = () => openStudy(sel);
+$("#bGloss").onclick = () => openGloss();
+$("#bTheme").onclick = () => setTheme(curTheme() === "dark" ? "light" : "dark");
+$("#bHelp").onclick = () => openModal($("#mHelp"));
+$("#zIn").onclick = () => zoomBy(1.25); $("#zOut").onclick = () => zoomBy(0.8); $("#zFit").onclick = fitAll;
+$("#bMore").onclick = e => { e.stopPropagation(); renderMenu(); $("#menu").classList.toggle("on"); };
+document.addEventListener("pointerdown", e => { if (!e.target.closest("#menu,#bMore")) $("#menu").classList.remove("on"); });
+function renderMenu() {
+  $("#menu").innerHTML = `<button data-m="lv1">Show domains only</button><button data-m="lv2">Open all objectives</button><button data-m="lv3">Open all topics</button><hr>
+  <button data-m="focus">Auto-collapse: ${S.focus ? "on" : "off"}</button><button data-m="recall">Recall mode: ${S.recall ? "on" : "off"}</button><hr>
+  <button data-m="study">Flashcards</button><button data-m="gloss">Acronyms</button><button data-m="theme">${curTheme() === "dark" ? "Light" : "Dark"} theme</button><button data-m="help">Help and shortcuts</button>`;
+}
+$("#menu").addEventListener("click", e => {
+  const b = e.target.closest("[data-m]"); if (!b) return; const m = b.dataset.m; $("#menu").classList.remove("on");
+  if (m.startsWith("lv")) setLevel(+m[2]); else if (m === "focus") setFocus(!S.focus); else if (m === "recall") setRecall(!S.recall);
+  else if (m === "study") openStudy(sel); else if (m === "gloss") openGloss(); else if (m === "theme") setTheme(curTheme() === "dark" ? "light" : "dark"); else if (m === "help") openModal($("#mHelp"));
+});
+$("#resetProg").onclick = () => { if (confirm("Clear every known mark? This can't be undone.")) { known.clear(); save(); refreshCounts(); toast("Progress cleared"); } };
+
+let tt = 0;
+function toast(msg) { const t = $("#toast"); t.textContent = msg; t.classList.add("on"); clearTimeout(tt); tt = setTimeout(() => t.classList.remove("on"), 2600); }
+
+/* ---------------- boot ---------------- */
+setTheme(S.theme);
+document.body.classList.toggle("recall", !!S.recall);
+$("#bRecall").setAttribute("aria-pressed", String(!!S.recall));
+$("#bFocus").setAttribute("aria-pressed", String(!!S.focus));
+$("#stats").textContent = `${domains.length} domains, ${domains.reduce((a, d) => a + d.children.length, 0)} objectives, ${leaves.length} topic cards and ${GL.length} acronyms.`;
+renderLegend();
+relayout();
+anim.dur = 0; tick(performance.now());
+fitAll(); camAnim && (camAnim.dur = 0); tick(performance.now());
+const boot = () => { relayout(); fitAll(); };
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(boot);
+addEventListener("resize", () => { clearTimeout(boot.t); boot.t = setTimeout(() => { if (!sel) fitAll(); }, 150); });
+if (!S.seen) { setTimeout(() => toast(matchMedia("(pointer: coarse)").matches ? "Tap a domain to open it. Drag to move around, pinch to zoom." : "Click a domain to open it. Drag or scroll to move around, Ctrl + scroll to zoom."), 600); S.seen = true; save(); }
+})();
+</script>
+</body>
+</html>
